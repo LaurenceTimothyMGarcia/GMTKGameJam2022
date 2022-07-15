@@ -32,6 +32,7 @@ public class DiceRoll : MonoBehaviour
 
     public int GetDiceResult()
     {
+        
         return diceResult;
     }
 
@@ -53,6 +54,8 @@ public class DiceRoll : MonoBehaviour
         finalResultSide = randomDiceSide + 1;
         diceResult = finalResultSide;
 
+        //render.size += new Vector2(0.5f, 0.5f);
+        //Tells the dice check it can grab the new number
         hasRolled = true;
     }
 }

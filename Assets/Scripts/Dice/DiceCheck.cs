@@ -55,9 +55,10 @@ public class DiceCheck : MonoBehaviour
             dRoll1.hasRolled = false;
         }
 
-        Debug.Log("Dice 1: " + rollResultList[0]);
-        Debug.Log("Dice 2: " + rollResultList[1]);
-        Debug.Log("Dice 3: " + rollResultList[2]);
+        //Debug to check list of dice
+        //Debug.Log("Dice 1: " + rollResultList[0]);
+        //Debug.Log("Dice 2: " + rollResultList[1]);
+        //Debug.Log("Dice 3: " + rollResultList[2]);
 
         weaponRoll = DiceListCheck();
 
@@ -195,6 +196,14 @@ public class DiceCheck : MonoBehaviour
             option = 11;
             return option;
         }
+
+        //Other options if possible//
+        /*
+            dice 1 + dice 2 = dice 3
+            dice 1 - dice 2 = dice 3
+            all evens
+            all odds
+        */
 
         return option;
     }
