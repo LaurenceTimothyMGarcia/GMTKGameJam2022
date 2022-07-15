@@ -139,4 +139,16 @@ public class PlayerController : MonoBehaviour
         Scaler.x *= -1;
         transform.localScale = Scaler;
     }
+ 
+     void OnTriggerEnter2D (Collider2D other)
+     {
+         var magnitude = 2500;
+ 
+         var force = transform.position - other.transform.position;
+ 
+         force.Normalize ();
+         GetComponent<Rigidbody2D> ().AddForce (-force * magnitude);
+
+
+     }
 }
