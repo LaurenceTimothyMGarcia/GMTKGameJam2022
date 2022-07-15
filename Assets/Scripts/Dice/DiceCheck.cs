@@ -19,7 +19,7 @@ public class DiceCheck : MonoBehaviour
     [SerializeField] GameObject dice3;
     [SerializeField] int rotateDie3;
 
-    private int[] rollResultList;
+    private int[] rollResultList = new int[3];
 
     void Awake()
     {
@@ -36,6 +36,26 @@ public class DiceCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (dRoll1.hasRolled)
+        {
+            rollResultList[0] = dRoll1.GetDiceResult();
+            dRoll1.hasRolled = false;
+        }
+
+        if (dRoll2.hasRolled)
+        {
+            rollResultList[1] = dRoll2.GetDiceResult();
+            dRoll1.hasRolled = false;
+        }
+
+        if (dRoll3.hasRolled)
+        {
+            rollResultList[2] = dRoll3.GetDiceResult();
+            dRoll1.hasRolled = false;
+        }
+
+        Debug.Log("Dice 1: " + rollResultList[0]);
+        Debug.Log("Dice 2: " + rollResultList[1]);
+        Debug.Log("Dice 3: " + rollResultList[2]);
     }
 }

@@ -12,6 +12,8 @@ public class DiceRoll : MonoBehaviour
     private Sprite[] diceSides;
     //Sprite renderer to change sprite
     private SpriteRenderer render;
+    //Provides a call to DiceCheck if it has been rolled
+    public bool hasRolled = false;
 
     void Start()
     {
@@ -26,6 +28,11 @@ public class DiceRoll : MonoBehaviour
         {
             StartCoroutine("RollDie");
         }
+    }
+
+    public int GetDiceResult()
+    {
+        return diceResult;
     }
 
     private IEnumerator RollDie()
@@ -45,6 +52,7 @@ public class DiceRoll : MonoBehaviour
 
         finalResultSide = randomDiceSide + 1;
         diceResult = finalResultSide;
-        Debug.Log(diceResult);
+
+        hasRolled = true;
     }
 }
