@@ -9,8 +9,9 @@ public class AttackArea : MonoBehaviour
    /// OnTriggerEnter is called when the Collider other enters the trigger.
    void OnTriggerEnter2D(Collider2D collider)
    {
-        //health is not defined this will need to be updated when health is implemented!!
-       //Health health = collider.GetComponent<Health>();
-       //health.damage(attacking);
+       if(collider.GetComponent<Health>() != null){
+        Health health = collider.GetComponent<Health>();
+        health.damage(damage);
+       }
    }
 }

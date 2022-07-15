@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class PlayerMelee : MonoBehaviour
 {   
-   private GameObject attackArea = default;
+    private GameObject attackArea = default;
 
-    private bool attacking = false;
-
+    public bool attacking = false;
     private float timeToAttack = 0.25f;
     private float timer = 0f;
 
@@ -18,7 +17,7 @@ public class PlayerMelee : MonoBehaviour
 
    void Update()
    {
-       if(Input.GetKeyDown(KeyCode.Space)){
+       if(Input.GetKeyDown(KeyCode.Mouse0)){
             Attack();
        }
 
@@ -35,6 +34,7 @@ public class PlayerMelee : MonoBehaviour
 
    private void Attack(){
         attacking = true;
+        Debug.Log("Hitting");
         attackArea.SetActive(attacking);
    }
 }
