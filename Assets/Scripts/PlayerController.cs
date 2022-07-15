@@ -140,14 +140,16 @@ public class PlayerController : MonoBehaviour
         transform.localScale = Scaler;
     }
  
-     void OnTriggerEnter2D (Collider2D other)
+    void OnCollisionEnter2D (Collision2D other)
      {
          var magnitude = 2500;
  
-         var force = transform.position - other.transform.position;
+         Vector2 force = transform.position - other.transform.position;
+
+         Debug.Log(force);
  
-         force.Normalize ();
-         GetComponent<Rigidbody2D> ().AddForce (-force * magnitude);
+         //force.Normalize ();
+         rb.AddForce(-force * magnitude);
 
 
      }
