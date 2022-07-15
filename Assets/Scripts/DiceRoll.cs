@@ -16,19 +16,19 @@ public class DiceRoll : MonoBehaviour
         diceSides = Resources.LoadAll<Sprite>("Dice/");
     }
 
-    /*void Update()
+    void Update()
     {
         //Roll dice here still figuring out when to roll it
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             StartCoroutine("RollDie");
         }
-    }*/
+    }
 
-    void OnMouseDown()
+    /*void OnMouseDown()
     {
         StartCoroutine("RollDie");
-    }
+    }*/
 
     private IEnumerator RollDie()
     {
