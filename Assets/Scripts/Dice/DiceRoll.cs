@@ -5,7 +5,8 @@ using UnityEngine;
 public class DiceRoll : MonoBehaviour
 {
     //How many iterations die should roll
-    public int rotateDie = 20;
+    public int rotateDie;
+    public int diceResult;
 
     //Array of dice sprites
     private Sprite[] diceSides;
@@ -21,7 +22,7 @@ public class DiceRoll : MonoBehaviour
     void Update()
     {
         //Roll dice here still figuring out when to roll it
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0))//change this to whatever we make it roll
         {
             StartCoroutine("RollDie");
         }
@@ -43,6 +44,7 @@ public class DiceRoll : MonoBehaviour
         }
 
         finalResultSide = randomDiceSide + 1;
-        Debug.Log(finalResultSide);
+        diceResult = finalResultSide;
+        Debug.Log(diceResult);
     }
 }
