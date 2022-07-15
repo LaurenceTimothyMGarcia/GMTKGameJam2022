@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class DiceRoll : MonoBehaviour
 {
+    //How many iterations die should roll
+    public int rotateDie = 20;
+
     //Array of dice sprites
     private Sprite[] diceSides;
-
     //Sprite renderer to change sprite
     private SpriteRenderer render;
 
@@ -30,7 +32,8 @@ public class DiceRoll : MonoBehaviour
         int randomDiceSide = 0;
         int finalResultSide = 0;
 
-        for (int i = 0; i <= 20; i++)
+        //How many times to switch between dice
+        for (int i = 0; i <= rotateDie; i++)
         {
             randomDiceSide = Random.Range(0,5);
 
