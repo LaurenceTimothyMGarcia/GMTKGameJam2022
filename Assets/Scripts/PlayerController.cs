@@ -142,15 +142,15 @@ public class PlayerController : MonoBehaviour
  
     void OnCollisionEnter2D (Collision2D other)
      {
-         var magnitude = 2500;
- 
-         Vector2 force = transform.position - other.transform.position;
-
-         Debug.Log(force);
- 
-         //force.Normalize ();
-         rb.AddForce(-force * magnitude);
-
+        if (other.gameObject.tag == "enemy")
+        {
+            var magnitude = 250;
+    
+            Vector2 force = transform.position - other.transform.position;
+    
+            force.Normalize ();
+            rb.AddForce(force * magnitude);
+        }
 
      }
 }
