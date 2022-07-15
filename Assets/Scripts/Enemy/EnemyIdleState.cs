@@ -10,7 +10,7 @@ public class EnemyIdleState : EnemyBaseState
 
     }
 
-    public override void OnCollisionEnter(EnemyStateManager Enemy) {
+    public override void OnCollisionEnter2D(Collision2D collision) {
         
     }
 

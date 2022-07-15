@@ -6,5 +6,5 @@ public abstract class EnemyBaseState : MonoBehaviour
 
     public abstract void UpdateState(EnemyStateManager Enemy);
 
-    public abstract void OnCollisionEnter(EnemyStateManager Enemy);
+    public abstract void OnCollisionEnter2D(Collision2D collision);
 }
