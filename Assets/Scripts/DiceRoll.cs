@@ -25,11 +25,6 @@ public class DiceRoll : MonoBehaviour
         }
     }
 
-    /*void OnMouseDown()
-    {
-        StartCoroutine("RollDie");
-    }*/
-
     private IEnumerator RollDie()
     {
         int randomDiceSide = 0;
