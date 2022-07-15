@@ -20,6 +20,7 @@ public class DiceCheck : MonoBehaviour
     [SerializeField] int rotateDie3;
 
     private int[] rollResultList = new int[3];
+    private int weaponRoll;
 
     void Awake()
     {
@@ -58,6 +59,143 @@ public class DiceCheck : MonoBehaviour
         Debug.Log("Dice 2: " + rollResultList[1]);
         Debug.Log("Dice 3: " + rollResultList[2]);
 
-        
+        weaponRoll = DiceListCheck();
+
+        switch(weaponRoll)
+        {
+            //Default gun
+            case 0:
+
+                break;
+            
+            //111 - Worst Roll, melee
+            case 1:
+                break;
+            
+            //314 - Turn into pie
+            case 2:
+                break;
+            
+            //420 - weed
+            case 3:
+                break;
+            
+            //666 - Enemies just dead, reroll
+            case 4:
+                break;
+            
+            //555 - Mario Star invinciblity
+            case 5:
+                break;
+
+            //All numbers are the same - 
+            case 6:
+                break;
+
+            //1st and 3rd die are the same - 
+            case 7:
+                break;
+            
+            //1st and 2nd die are the same - 
+            case 8:
+                break;
+            
+            //2nd and 3rd die are the same - 
+            case 9:
+                break;
+            
+            //Increasing Numbers - 
+            case 10:
+                break;
+            
+            //Decreasing Numbers - 
+            case 11:
+                break;
+        }
+    }
+
+    int DiceListCheck()
+    {
+        //Default option is default gun
+        int option = 0;
+
+        //Rolls 111 shittiest roll, gives just melee
+        if (rollResultList[0] == 1 && rollResultList[1] == 1 && rollResultList[2] == 1)
+        {
+            option = 1;
+            return option;
+        }
+
+        //Rolls 314 - Turn into pie
+        if (rollResultList[0] == 3 && rollResultList[1] == 1 && rollResultList[2] == 4)
+        {
+            option = 2;
+            return option;
+        }
+
+        //Rolls 420 - Something about weed
+        if (rollResultList[0] == 4 && rollResultList[1] == 2 && rollResultList[2] == 0)
+        {
+            option = 3;
+            return option;
+        }
+
+        //Rolls 666 - Enemies just dead, reroll
+        if (rollResultList[0] == 6 && rollResultList[1] == 6 && rollResultList[2] == 6)
+        {
+            option = 4;
+            return option;
+        }
+
+        //Rolls 555 - Mario star invincible
+        if (rollResultList[0] == 5 && rollResultList[1] == 5 && rollResultList[2] == 5)
+        {
+            option = 5;
+            return option;
+        }
+
+        //Rolls all same number
+        if (rollResultList[0] == rollResultList[1] && rollResultList[1] == rollResultList[2])
+        {
+            option = 6;
+            return option;
+        }
+
+        //Rolls first and third die the same
+        if (rollResultList[0] == rollResultList[2])
+        {
+            option = 7;
+            return option;
+        }
+
+        //Rolls first and second are same
+        if (rollResultList[0] == rollResultList[1])
+        {
+            option = 8;
+            return option;
+        }
+
+        //Rolls second and third die the same
+        if (rollResultList[1] == rollResultList[2])
+        {
+            option = 9;
+            return option;
+        }
+
+        //Rolls consectutively increasing numbers
+        if ((rollResultList[0] + 2) == (rollResultList[1] + 1) && (rollResultList[1] + 1) == rollResultList[2])
+        {
+            option = 10;
+            return option;
+        }
+
+        //Rolls consectutively decreasing numbers
+        if ((rollResultList[2] + 2) == (rollResultList[1] + 1) && (rollResultList[1] + 1) == rollResultList[0])
+        {
+            option = 11;
+            return option;
+        }
+
+        return option;
     }
 }
