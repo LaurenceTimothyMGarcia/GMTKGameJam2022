@@ -6,13 +6,15 @@ public class EnemyStateManager : MonoBehaviour
 {
 
     EnemyBaseState currentState;
-    EnemyIdleState IdleState = new EnemyIdleState();
+    EnemyIdleState IdleState;
     /*EnemyDuckState DuckState = new EnemyDuckState();
     EnemyHopState HopState = new EnemyHopState();*/
 
     // Start is called before the first frame update
     void Start()
     {
+        IdleState = GetComponent<EnemyIdleState>();
+
         // starting state for the state machine
         currentState = IdleState;
 
