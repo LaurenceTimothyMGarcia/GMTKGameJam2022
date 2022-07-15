@@ -10,7 +10,7 @@ public class AttackArea : MonoBehaviour
    void OnTriggerEnter2D(Collider2D collider)
    {
         //health is not defined this will need to be updated when health is implemented!!
-       Health health = collider.GetComponent<Health>();
-       health.damage(attacking);
+       //Health health = collider.GetComponent<Health>();
+       //health.damage(attacking);
    }
 }

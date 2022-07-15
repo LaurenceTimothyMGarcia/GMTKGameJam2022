@@ -104,7 +104,7 @@ MonoBehaviour:
   damage: 0
   whatIsSolid:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   destroyEffect: {fileID: 0}
 --- !u!61 &4891476020962368553
 BoxCollider2D:
