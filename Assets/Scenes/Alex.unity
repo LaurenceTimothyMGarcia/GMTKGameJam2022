@@ -176,9 +176,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4767390417164754748, guid: 076bcd1731a3b094da58d98149c34e0c, type: 3}
       propertyPath: m_Name
-      value: Player (1)
+      value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4767390417164754689, guid: 076bcd1731a3b094da58d98149c34e0c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 076bcd1731a3b094da58d98149c34e0c, type: 3}
 --- !u!1 &1381038200
 GameObject:
@@ -207,7 +208,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1381038200}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 30e3cc730d1ee3642999671cd6a05953, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
