@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class EnemyBaseState
+public abstract class EnemyBaseState : MonoBehaviour
 {
     public abstract void EnterState(EnemyStateManager Enemy);
 
