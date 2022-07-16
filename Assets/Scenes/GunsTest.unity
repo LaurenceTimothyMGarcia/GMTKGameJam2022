@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3070566339643485107, guid: 076bcd1731a3b094da58d98149c34e0c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3185229633690212331, guid: 076bcd1731a3b094da58d98149c34e0c, type: 3}
       propertyPath: distance
       value: 1
@@ -276,6 +280,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7859064663942999275, guid: 076bcd1731a3b094da58d98149c34e0c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048028425478456707, guid: 076bcd1731a3b094da58d98149c34e0c, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
