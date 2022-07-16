@@ -16,7 +16,7 @@ public class WeaponActive : MonoBehaviour
         Debug.Log("Inital Startup");
         //WeaponSetActive(0);
         weaponArray[0].SetActive(true);
-        weaponArray[6].SetActive(false);
+        // weaponArray[6].SetActive(false);
         chooseWeapon = diceTriplet.GetComponent<DiceCheck>();
     }
 
@@ -24,12 +24,12 @@ public class WeaponActive : MonoBehaviour
     void Update()
     {
         //checks if dice 1 2 and 3 are not currently rolling then runs the set active
-        if (!chooseWeapon.dRoll1.hasRolled && !chooseWeapon.dRoll2.hasRolled && !chooseWeapon.dRoll3.hasRolled)
-        {
-            //Debug.Log("WEapon Roll: " + DiceCheck.weaponRoll);
-            WeaponSetActive(DiceCheck.weaponRoll);
-            //Debug.Log("Is weapon active? " + weaponArray[DiceCheck.weaponRoll].activeSelf);
-        }
+        // if (!chooseWeapon.dRoll1.hasRolled && !chooseWeapon.dRoll2.hasRolled && !chooseWeapon.dRoll3.hasRolled)
+        // {
+        //     //Debug.Log("WEapon Roll: " + DiceCheck.weaponRoll);
+        //     WeaponSetActive(DiceCheck.weaponRoll);
+        //     //Debug.Log("Is weapon active? " + weaponArray[DiceCheck.weaponRoll].activeSelf);
+        // }
     }
 
     //Sets everything to false except the current weapon
