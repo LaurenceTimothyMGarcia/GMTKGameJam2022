@@ -7,6 +7,7 @@ public class ForcePush : MonoBehaviour
     public float speed;
     public float lifeTime;
     public float distance;
+    public float forceAmount;
     public int damage;
     public LayerMask whatIsSolid;
     public GameObject projectile;
@@ -23,7 +24,7 @@ public class ForcePush : MonoBehaviour
         if (hitInfo.collider != null) {
             if (hitInfo.collider.CompareTag("Enemy")) 
             {
-                //hitInfo.collider.gameObject.;
+                hitInfo.rigidbody.AddForce(new Vector3(forceAmount, forceAmount, forceAmount), ForceMode2D.Impulse);
             }
 
             DestroyProjectile();
