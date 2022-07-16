@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour {
     public float lifeTime;
     public float distance;
     public int damage;
+    public bool isGrenade;
     public LayerMask whatIsSolid;
 
     public GameObject destroyEffect;
@@ -33,6 +34,11 @@ public class Projectile : MonoBehaviour {
 
     void DestroyProjectile() {
         //Instantiate(destroyEffect, transform.position, Quaternion.identity);
+        if (isGrenade)
+        {
+            //have it explode here
+        }
+
         Destroy(gameObject);
     }
 }
