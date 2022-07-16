@@ -30,7 +30,6 @@ public class WeaponActive : MonoBehaviour
         //      WeaponSetActive(DiceCheck.weaponRoll);
         //     //Debug.Log("Is weapon active? " + weaponArray[DiceCheck.weaponRoll].activeSelf);
         // }
-        Debug.Log(weaponArray.Length);
     }
 
     //Sets everything to false except the current weapon

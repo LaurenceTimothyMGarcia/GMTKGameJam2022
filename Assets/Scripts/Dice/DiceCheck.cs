@@ -73,6 +73,10 @@ public class DiceCheck : MonoBehaviour
         //Default option is default gun
         int option = 0;
 
+        Debug.Log("Dice 1 is: " + rollResultList[0]);
+        Debug.Log("Dice 2 is: " + rollResultList[1]);
+        Debug.Log("Dice 3 is: " + rollResultList[2]);
+
         //Rolls 111 shittiest roll, gives just melee
         if (rollResultList[0] == 1 && rollResultList[1] == 1 && rollResultList[2] == 1)
         {
@@ -118,7 +122,6 @@ public class DiceCheck : MonoBehaviour
         //Rolls first and third die the same - Sniper
         if (rollResultList[0] == rollResultList[2])
         {
-            Debug.Log("Result 7");
             option = 7;
             return option;
         }
@@ -133,7 +136,6 @@ public class DiceCheck : MonoBehaviour
         //Rolls second and third die the same - Bomb thrower?
         if (rollResultList[1] == rollResultList[2])
         {
-            Debug.Log("Result 9");
             option = 9;
             return option;
         }
