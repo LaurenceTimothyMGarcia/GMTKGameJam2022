@@ -5,26 +5,31 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int health = 100;
-    public int MAX_HEALTH = 100;
-    
+    private int health = 100;
+    private int MAX_HEALTH = 100;
+    public Animator animator;
     //invincibility
     public bool invincibility = false;
-
-    void Start()
+    /// <summary>
+    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// </summary>
+    void Update()
     {
-        health = MAX_HEALTH;
+        if(Input.GetKeyUp(KeyCode.Mouse0)){
+            Debug.Log("pressing mouse");
+            damage(5);
+        }
     }
-
     public void damage(int amount){
         if(amount < 0){
             throw new System.ArgumentOutOfRangeException("Health out of bounds!!!");
         }
-
+        
         if(invincibility == false){
             Debug.Log("took damage!");
             Debug.Log(health);
             this.health -= amount;
+            StartCoroutine(TookDamage());
             if(health <= 0){
                 Death();
             }
@@ -49,6 +54,9 @@ public class Health : MonoBehaviour
         }
 
     }
-
-    
+    private IEnumerator TookDamage(){
+        animator.SetBool("Hurt", true);
+        yield return new WaitForSeconds(0.25f);
+        animator.SetBool("Hurt", false);
+    }
 }
