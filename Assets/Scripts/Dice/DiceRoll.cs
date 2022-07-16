@@ -16,22 +16,22 @@ public class DiceRoll : MonoBehaviour
     public bool hasRolled = false;
 
     //Timer Related functions
-    private float currentTime;
-    public int startTime;
+    //private float currentTime;
+    //public int startTime;
 
     void Start()
     {
         render = GetComponent<SpriteRenderer>();
         diceSides = Resources.LoadAll<Sprite>("Dice/");
-        currentTime = startTime;
+        //currentTime = startTime;
     }
 
     void Update()
     {
         //Roll dice here still figuring out when to roll it
-        currentTime = currentTime - Time.deltaTime;
+        //currentTime = currentTime - Time.deltaTime;
 
-        if (currentTime <= 0.001)//change this to whatever we make it roll
+        if (Input.GetKey(KeyCode.W))//change this to whatever we make it roll
         {
             StartCoroutine("RollDie");
         }
@@ -59,12 +59,11 @@ public class DiceRoll : MonoBehaviour
 
         finalResultSide = randomDiceSide + 1;
         diceResult = finalResultSide;
-
-        //render.size += new Vector2(0.5f, 0.5f);
+        
         //Tells the dice check it can grab the new number
         hasRolled = true;
 
         //Resets Timer
-        currentTime = startTime;
+        //currentTime = startTime;
     }
 }
