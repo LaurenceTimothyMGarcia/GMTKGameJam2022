@@ -22,10 +22,7 @@ public class Health : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Mouse0)){
-            Debug.Log("pressing mouse");
-            damage(5);
-        }
+
     }
     public void damage(int amount){
         if(amount < 0){
