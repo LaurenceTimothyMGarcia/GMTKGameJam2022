@@ -6,17 +6,22 @@ public class WeaponActive : MonoBehaviour
 {
     public GameObject[] weaponArray = new GameObject[12];
 
+    DiceCheck chooseWeapon;
+    public GameObject diceTriplet;
+
     // Start is called before the first frame update
     void Start()
     {
         //Sets everything to false
         WeaponSetActive(-1);
+        chooseWeapon = diceTriplet.GetComponent<DiceCheck>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("WEapon Roll: " + DiceCheck.weaponRoll);
+        WeaponSetActive(DiceCheck.weaponRoll);
     }
 
     //Sets everything to false except the current weapon

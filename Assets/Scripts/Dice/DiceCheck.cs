@@ -22,7 +22,7 @@ public class DiceCheck : MonoBehaviour
     [SerializeField] int rotateDie3;
 
     private int[] rollResultList = new int[3];
-    private int weaponRoll;
+    public static int weaponRoll;
 
     void Awake()
     {
@@ -64,7 +64,7 @@ public class DiceCheck : MonoBehaviour
 
         weaponRoll = DiceListCheck();
 
-        currentWeapons.WeaponSetActive(weaponRoll);
+        //currentWeapons.WeaponSetActive(weaponRoll);
 
         /*switch(weaponRoll)
         {
