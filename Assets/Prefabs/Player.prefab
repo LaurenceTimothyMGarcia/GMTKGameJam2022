@@ -1059,4 +1059,4 @@ MonoBehaviour:
   projectile: {fileID: 5518736748760371875, guid: 44acb09eea2ea7c40945e993c153a8f3, type: 3}
   shotEffect: {fileID: 0}
   shotPoint: {fileID: 2133566938181866602}
-  startTimeBtwShots: 0.1
+  startTimeBtwShots: 0.05
