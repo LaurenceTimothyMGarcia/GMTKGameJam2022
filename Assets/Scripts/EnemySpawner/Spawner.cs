@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private float walkerInterval = 3.5f;
     [SerializeField]
-    private float flyerInterval = 5f;
+    private float flyerInterval = 3f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +24,8 @@ public class Spawner : MonoBehaviour
     private IEnumerator spawnEnemyFloor(float interval, GameObject enemy)
     {
         yield return new WaitForSeconds(interval);
-        int ran = Random.Range(-1, 0);
-        if (ran == 0) ran = 1;
+        int ran = Random.Range(0, 2); //Sets ran to either 0 or 1
+        if (ran == 0) ran = -1;
         GameObject newEnemy = Instantiate(enemy, new Vector3(9.25f * ran, -2.75f, 0), Quaternion.identity);
         StartCoroutine(spawnEnemyFloor(interval, enemy));
     }
