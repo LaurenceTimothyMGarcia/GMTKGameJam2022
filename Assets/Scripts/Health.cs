@@ -15,10 +15,10 @@ public class Health : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Mouse0)){
+        /*if(Input.GetKeyUp(KeyCode.Mouse0)){
             Debug.Log("pressing mouse");
             damage(5);
-        }
+        }*/
     }
     public void damage(int amount){
         if(amount < 0){
