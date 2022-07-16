@@ -46,7 +46,8 @@ GameObject:
   - component: {fileID: 2369840976029298603}
   - component: {fileID: 2369840976029298513}
   - component: {fileID: 2369840976029298606}
-  - component: {fileID: 5785538520597379754}
+  - component: {fileID: 4629698094986369217}
+  - component: {fileID: 8380677635472941755}
   m_Layer: 7
   m_Name: EnemyWalker
   m_TagString: Enemy
@@ -65,7 +66,8 @@ Transform:
   m_LocalPosition: {x: 5.9, y: -2.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2369840976605794063}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -228,3 +230,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8380677635472941755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7143151337603684985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7fd2f722ba75440ac368839648f048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setHealth: 100
+  currentHealth: 0

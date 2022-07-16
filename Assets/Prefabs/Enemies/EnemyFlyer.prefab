@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 5185956361088908286}
   - component: {fileID: 5185956361088908272}
   - component: {fileID: 5185956361088908275}
-  - component: {fileID: 3983335806980706066}
-  - component: {fileID: 2837422982351239406}
+  - component: {fileID: 9087704316331654161}
+  - component: {fileID: 3898037736294920729}
   m_Layer: 7
   m_Name: EnemyFlyer
   m_TagString: Enemy
@@ -198,3 +198,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3898037736294920729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6899377898761361493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7fd2f722ba75440ac368839648f048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setHealth: 100
+  currentHealth: 0
