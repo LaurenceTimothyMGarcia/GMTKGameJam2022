@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7425739516287533291, guid: ba7e50b39fc38e0428043f57236e7306, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7425739516287533291, guid: ba7e50b39fc38e0428043f57236e7306, type: 3}
       propertyPath: m_LocalPosition.x
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ba33425aa4784478759333d78edc82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 171007815}
+  target: {fileID: 0}
   offset: {x: 0, y: 2, z: -3}
   smoothFactor: 1
 --- !u!1 &913011349
@@ -520,6 +520,10 @@ PrefabInstance:
     - target: {fileID: 4767390417164754748, guid: 076bcd1731a3b094da58d98149c34e0c, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6171396428865852118, guid: 076bcd1731a3b094da58d98149c34e0c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 076bcd1731a3b094da58d98149c34e0c, type: 3}

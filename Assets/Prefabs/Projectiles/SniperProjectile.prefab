@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   lifeTime: 2
-  distance: 0.5
+  distance: 0.25
   damage: 100
   isGrenade: 0
   whatIsSolid:
