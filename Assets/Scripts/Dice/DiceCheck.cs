@@ -42,76 +42,24 @@ public class DiceCheck : MonoBehaviour
         if (dRoll1.hasRolled)
         {
             rollResultList[0] = dRoll1.GetDiceResult();
-            dRoll1.hasRolled = false;
         }
 
         if (dRoll2.hasRolled)
         {
             rollResultList[1] = dRoll2.GetDiceResult();
-            dRoll2.hasRolled = false;
         }
 
         if (dRoll3.hasRolled)
         {
             rollResultList[2] = dRoll3.GetDiceResult();
+            dRoll1.hasRolled = false;
+            dRoll2.hasRolled = false;
             dRoll3.hasRolled = false;
         }
 
         weaponRoll = DiceListCheck();
 
         //currentWeapons.WeaponSetActive(weaponRoll);
-
-        /*switch(weaponRoll)
-        {
-            //Default - pistol HERE
-            case 0:
-                
-                break;
-            
-            //111 - Worst Roll, melee
-            case 1:
-                break;
-            
-            //314 - Turn into pie
-            case 2:
-                break;
-            
-            //421 - weed
-            case 3:
-                break;
-            
-            //666 - Enemies just dead, reroll
-            case 4:
-                break;
-            
-            //555 - Mario Star invinciblity
-            case 5:
-                break;
-
-            //All numbers are the same - machine gun HERE
-            case 6:
-                break;
-
-            //1st and 3rd die are the same - sniper HERE
-            case 7:
-                break;
-            
-            //1st and 2nd die are the same - Whip
-            case 8:
-                break;
-            
-            //2nd and 3rd die are the same - grenade launcher HERE
-            case 9:
-                break;
-            
-            //Increasing Numbers - Force Push + Could use to help player jump more
-            case 10:
-                break;
-            
-            //Decreasing Numbers - laser gun/eyes HERE
-            case 11:
-                break;
-        }*/
     }
 
     int DiceListCheck()

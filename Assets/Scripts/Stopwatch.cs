@@ -19,6 +19,7 @@ public class Stopwatch : MonoBehaviour
     void Start()
     {
         currentTime = 0;
+        stopwatchActive = true;
     }
 
     // Update is called once per frame
@@ -28,7 +29,13 @@ public class Stopwatch : MonoBehaviour
         {
             currentTime = currentTime + Time.deltaTime;
         }
+
+        
+
+        //Score for game
         score = Mathf.RoundToInt(currentTime * multiplier);
+
+        //Print stopwatch
         scoreText.text = score.ToString();
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
         currentTimeText.text = time.ToString(@"mm\:ss\:fff");

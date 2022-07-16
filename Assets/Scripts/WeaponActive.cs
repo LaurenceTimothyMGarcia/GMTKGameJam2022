@@ -27,7 +27,7 @@ public class WeaponActive : MonoBehaviour
         // if (!chooseWeapon.dRoll1.hasRolled && !chooseWeapon.dRoll2.hasRolled && !chooseWeapon.dRoll3.hasRolled)
         // {
         //     //Debug.Log("WEapon Roll: " + DiceCheck.weaponRoll);
-        //     WeaponSetActive(DiceCheck.weaponRoll);
+        //      WeaponSetActive(DiceCheck.weaponRoll);
         //     //Debug.Log("Is weapon active? " + weaponArray[DiceCheck.weaponRoll].activeSelf);
         // }
     }
