@@ -16,14 +16,15 @@ public class DiceRoll : MonoBehaviour
     public bool hasRolled = false;
 
     //Timer Related functions
-    //private float currentTime;
-    //public int startTime;
+    public float interval = 10f;
 
     void Start()
     {
         render = GetComponent<SpriteRenderer>();
         diceSides = Resources.LoadAll<Sprite>("Dice/");
         //currentTime = startTime;
+
+        InvokeRepeating("StartRoll", 0f, interval);
     }
 
     void Update()
@@ -31,15 +32,20 @@ public class DiceRoll : MonoBehaviour
         //Roll dice here still figuring out when to roll it
         //currentTime = currentTime - Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.W))//change this to whatever we make it roll
+        /*if (Input.GetKey(KeyCode.W))//change this to whatever we make it roll
         {
             StartCoroutine("RollDie");
-        }
+        }*/
     }
 
     public int GetDiceResult()
     {
         return diceResult;
+    }
+
+    private void StartRoll()
+    {
+        StartCoroutine("RollDie");
     }
 
     private IEnumerator RollDie()
