@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 50473317135398511}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3944589260472091587
 MonoBehaviour:
@@ -102,7 +102,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 50473317135398511}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3940007833576456707
 MonoBehaviour:
@@ -249,7 +249,7 @@ Transform:
   m_Children:
   - {fileID: 3402245100617968026}
   m_Father: {fileID: 50473317135398511}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6406275918165811328
 SpriteRenderer:
@@ -416,7 +416,7 @@ Transform:
   - {fileID: 7799594740685866184}
   - {fileID: 143571171346733669}
   m_Father: {fileID: 50473317135398511}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7855762773434618922
 MonoBehaviour:
@@ -575,7 +575,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 50473317135398511}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2379834306051112694
 SpriteRenderer:
@@ -692,7 +692,7 @@ Transform:
   m_Children:
   - {fileID: 6983070012036173364}
   m_Father: {fileID: 50473317135398511}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &262507127230965396
 SpriteRenderer:
@@ -959,7 +959,7 @@ Transform:
   m_Children:
   - {fileID: 5415905965052532750}
   m_Father: {fileID: 50473317135398511}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6856309886400925450
 SpriteRenderer:
@@ -1063,7 +1063,7 @@ Transform:
   m_Children:
   - {fileID: 870982641564512247}
   m_Father: {fileID: 50473317135398511}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5017252263893820035
 SpriteRenderer:
@@ -1135,6 +1135,37 @@ MonoBehaviour:
   shotPoint: {fileID: 870982641564512247}
   renderer: {fileID: 5017252263893820035}
   startTimeBtwShots: 0.5
+--- !u!1 &6663270004310116019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6120485902640231893}
+  m_Layer: 0
+  m_Name: Melee
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &6120485902640231893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6663270004310116019}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.4, y: 0.07, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 50473317135398511}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6828761948129820239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,7 +1198,7 @@ Transform:
   m_Children:
   - {fileID: 5664007174368047521}
   m_Father: {fileID: 50473317135398511}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &68566631308887979
 SpriteRenderer:
@@ -1278,6 +1309,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5712168239888871713}
+  - {fileID: 6120485902640231893}
   - {fileID: 5585101964306669107}
   - {fileID: 4323139203917528874}
   - {fileID: 7399638709697646429}
@@ -1485,9 +1517,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponArray:
   - {fileID: 1902393211118856899}
-  - {fileID: 0}
+  - {fileID: 6663270004310116019}
   - {fileID: 6374841316532584844}
-  - {fileID: 6374841316532584844}
+  - {fileID: 3291864920334504390}
   - {fileID: 632035790629926894}
   - {fileID: 334774861603275992}
   - {fileID: 6828761948129820239}
@@ -1646,7 +1678,7 @@ Transform:
   m_Children:
   - {fileID: 6309300618111451088}
   m_Father: {fileID: 50473317135398511}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7669809665474849884
 SpriteRenderer:
@@ -1789,7 +1821,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1279423844340589517, guid: 3fc29e63cc90ab747a4fbeb56fae9d80, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1279423844340589517, guid: 3fc29e63cc90ab747a4fbeb56fae9d80, type: 3}
       propertyPath: m_LocalPosition.x
