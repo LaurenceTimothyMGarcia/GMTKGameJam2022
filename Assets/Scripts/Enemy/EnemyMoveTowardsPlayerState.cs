@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class EnemyMoveTowardsPlayerState : EnemyBaseState
 {
+
+    public Animator animator;
     private Transform target;
     private Rigidbody2D rb;
     public bool flying;
