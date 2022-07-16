@@ -6,9 +6,12 @@ public class PlayerMelee : MonoBehaviour
 {   
     public GameObject attackArea = default;
     public bool attacking = false;
-    private float timeToAttack = 0.25f;
+    public float timeToAttack = 0.25f;
     private float timer = 0f;
-    
+    public SpriteRenderer renderer;
+    public float offset;
+    private float timeBtwAttacks;
+    public float startTimeBtwAttacks;
     void Start()
     {
         attackArea = transform.GetChild(1).gameObject;
@@ -17,10 +20,33 @@ public class PlayerMelee : MonoBehaviour
 
    void Update()
    {
-        //attackArea.SetActive(false);
-        if(Input.GetKeyDown(KeyCode.Mouse1)){
-            Attack();
+        // Handles the weapon rotation
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
+        if (difference.x < 0)
+        {
+            renderer.flipX = true;
         }
+        else
+        {
+            renderer.flipX = false;
+        }
+
+        if(Input.GetMouseButton(0))
+        {
+            if (!attacking && timeBtwAttacks <= 0)
+            {
+                timeBtwAttacks = startTimeBtwAttacks;
+                Attack();
+            }
+        }
+
+        if (!attacking && timeBtwAttacks > 0)
+        {
+            timeBtwAttacks -= Time.deltaTime;
+        }
+        
 
         //reset attack
         if(attacking){
@@ -34,6 +60,8 @@ public class PlayerMelee : MonoBehaviour
                 attackArea.SetActive(attacking);
             }
         }
+
+
    }
 
     private void Attack(){
