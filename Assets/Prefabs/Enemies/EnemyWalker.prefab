@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 2369840976029298603}
   - component: {fileID: 2369840976029298513}
   - component: {fileID: 2369840976029298606}
+  - component: {fileID: 5785538520597379754}
   m_Layer: 7
   m_Name: EnemyWalker
   m_TagString: Enemy
@@ -62,7 +63,7 @@ Transform:
   m_GameObject: {fileID: 7143151337603684985}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.9, y: -2.78, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2369840976605794063}
@@ -207,3 +208,17 @@ MonoBehaviour:
   flying: 0
   speed: 4
   minDistance: 1
+--- !u!114 &5785538520597379754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7143151337603684985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7fd2f722ba75440ac368839648f048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setHealth: 100
+  currentHealth: 0
