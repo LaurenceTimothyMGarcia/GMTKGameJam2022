@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DiceCheck : MonoBehaviour
 {
+    WeaponActive currentWeapons;
+
     //Dice 1
     DiceRoll dRoll1;
     [SerializeField] GameObject dice1;
@@ -62,11 +64,13 @@ public class DiceCheck : MonoBehaviour
 
         weaponRoll = DiceListCheck();
 
-        switch(weaponRoll)
-        {
-            //Default - pistol
-            case 0:
+        currentWeapons.WeaponSetActive(weaponRoll);
 
+        /*switch(weaponRoll)
+        {
+            //Default - pistol HERE
+            case 0:
+                
                 break;
             
             //111 - Worst Roll, melee
@@ -89,11 +93,11 @@ public class DiceCheck : MonoBehaviour
             case 5:
                 break;
 
-            //All numbers are the same - machine gun
+            //All numbers are the same - machine gun HERE
             case 6:
                 break;
 
-            //1st and 3rd die are the same - sniper
+            //1st and 3rd die are the same - sniper HERE
             case 7:
                 break;
             
@@ -101,7 +105,7 @@ public class DiceCheck : MonoBehaviour
             case 8:
                 break;
             
-            //2nd and 3rd die are the same - grenade launcher
+            //2nd and 3rd die are the same - grenade launcher HERE
             case 9:
                 break;
             
@@ -109,10 +113,10 @@ public class DiceCheck : MonoBehaviour
             case 10:
                 break;
             
-            //Decreasing Numbers - laser gun/eyes
+            //Decreasing Numbers - laser gun/eyes HERE
             case 11:
                 break;
-        }
+        }*/
     }
 
     int DiceListCheck()
