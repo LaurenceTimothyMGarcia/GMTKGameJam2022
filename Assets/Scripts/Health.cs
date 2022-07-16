@@ -5,14 +5,21 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int health = 100;
-    private int MAX_HEALTH = 100;
+    public int health = 100;
+    public int MAX_HEALTH = 100;
     public Animator animator;
+
     //invincibility
     public bool invincibility = false;
     /// <summary>
     /// Update is called every frame, if the MonoBehaviour is enabled.
     /// </summary>
+
+    void Start()
+    {
+        health = MAX_HEALTH;
+    }
+
     void Update()
     {
         /*if(Input.GetKeyUp(KeyCode.Mouse0)){
