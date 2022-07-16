@@ -23,16 +23,16 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(interval);
         int ran = Random.Range(0, 2); //Sets ran to either 0 or 1
         if (ran == 0) ran = -1;
-        GameObject newEnemy = Instantiate(spawnedPrefab, new Vector3(9.25f * ran, -2.75f, 0), Quaternion.identity);
-        newEnemy.type = enemy;
+        GameObject newEnemy = Instantiate(enemy, new Vector3(9.25f * ran, -2.75f, 0), Quaternion.identity);
+        //newEnemy.type = enemy;
         StartCoroutine(spawnEnemyFloor(interval, enemy));
     }
 
     private IEnumerator spawnEnemyAir(float interval, GameObject enemy)
     {
         yield return new WaitForSeconds(interval);
-        GameObject newEnemy = Instantiate(spawnedPrefab, new Vector3(Random.Range(-9.25f, 9.25f), Random.Range(-2.75f, 3.5f), 0), Quaternion.identity);
-        newEnemy.type = enemy;
+        GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(-9.25f, 9.25f), Random.Range(-2.75f, 3.5f), 0), Quaternion.identity);
+        //newEnemy.type = enemy;
         StartCoroutine(spawnEnemyAir(interval, enemy));
     }
 }
