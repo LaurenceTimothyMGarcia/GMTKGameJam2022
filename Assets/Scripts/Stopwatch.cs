@@ -8,7 +8,7 @@ using System;
 public class Stopwatch : MonoBehaviour
 {
     bool stopwatchActive = false;
-    float currentTime;
+    public float currentTime;
     public TMP_Text currentTimeText;
 
     int score;
@@ -29,8 +29,6 @@ public class Stopwatch : MonoBehaviour
         {
             currentTime = currentTime + Time.deltaTime;
         }
-
-        
 
         //Score for game
         score = Mathf.RoundToInt(currentTime * multiplier);
