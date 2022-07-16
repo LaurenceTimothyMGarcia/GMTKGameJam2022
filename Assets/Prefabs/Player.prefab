@@ -164,6 +164,7 @@ MonoBehaviour:
   projectile: {fileID: 5518736748760371875, guid: afdbe37d84fae6d4fa8b46e210cdf163, type: 3}
   shotEffect: {fileID: 0}
   shotPoint: {fileID: 7668118703980148703}
+  renderer: {fileID: 4125093534138541610}
   startTimeBtwShots: 0.5
 --- !u!1 &1410498757280214017
 GameObject:
@@ -267,6 +268,7 @@ MonoBehaviour:
   projectile: {fileID: 5518736748760371875, guid: 95845af813c308e48901dc9fcff64c8a, type: 3}
   shotEffect: {fileID: 0}
   shotPoint: {fileID: 4593489774558297940}
+  renderer: {fileID: 6717532852554495499}
   startTimeBtwShots: 1
 --- !u!1 &2867886724123035139
 GameObject:
@@ -764,6 +766,7 @@ MonoBehaviour:
   projectile: {fileID: 5518736748760371875, guid: 13e9eae5b272fc242b1caa7687a3b507, type: 3}
   shotEffect: {fileID: 0}
   shotPoint: {fileID: 3445832529570803310}
+  renderer: {fileID: 5057394204753502982}
   startTimeBtwShots: 0.5
 --- !u!1 &6171396428865852118
 GameObject:
@@ -867,6 +870,7 @@ MonoBehaviour:
   projectile: {fileID: 5518736748760371875, guid: 1e3d5882a47b8634d977bb60fcd0a8c0, type: 3}
   shotEffect: {fileID: 0}
   shotPoint: {fileID: 9019473470639936748}
+  renderer: {fileID: 7391138696023885853}
   startTimeBtwShots: 0.001
 --- !u!1 &6830229220735882060
 GameObject:
@@ -1032,6 +1036,7 @@ MonoBehaviour:
   projectile: {fileID: 5518736748760371875, guid: e8137da5d5a658b4da82d00545849e7d, type: 3}
   shotEffect: {fileID: 0}
   shotPoint: {fileID: 7284338573214908706}
+  renderer: {fileID: 6775830552384002691}
   startTimeBtwShots: 0.25
 --- !u!1 &7859064663942999275
 GameObject:
@@ -1135,6 +1140,7 @@ MonoBehaviour:
   projectile: {fileID: 5518736748760371875, guid: 44acb09eea2ea7c40945e993c153a8f3, type: 3}
   shotEffect: {fileID: 0}
   shotPoint: {fileID: 2133566938181866602}
+  renderer: {fileID: 5084174347700548463}
   startTimeBtwShots: 0.05
 --- !u!1001 &6901349965805669039
 PrefabInstance:
