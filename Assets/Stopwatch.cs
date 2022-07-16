@@ -11,6 +11,10 @@ public class Stopwatch : MonoBehaviour
     float currentTime;
     public TMP_Text currentTimeText;
 
+    int score;
+    public TMP_Text scoreText;
+    public float multiplier = 5;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +28,8 @@ public class Stopwatch : MonoBehaviour
         {
             currentTime = currentTime + Time.deltaTime;
         }
+        score = Mathf.RoundToInt(currentTime * multiplier);
+        scoreText.text = score.ToString();
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
         currentTimeText.text = time.ToString(@"mm\:ss\:fff");
     }
