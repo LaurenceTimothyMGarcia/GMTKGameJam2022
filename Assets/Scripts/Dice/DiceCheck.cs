@@ -118,6 +118,7 @@ public class DiceCheck : MonoBehaviour
         //Rolls first and third die the same - Sniper
         if (rollResultList[0] == rollResultList[2])
         {
+            Debug.Log("Result 7");
             option = 7;
             return option;
         }
