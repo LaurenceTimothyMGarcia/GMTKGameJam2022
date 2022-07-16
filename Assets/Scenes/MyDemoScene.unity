@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &357034560 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4767390417164754690, guid: 076bcd1731a3b094da58d98149c34e0c, type: 3}
+  m_PrefabInstance: {fileID: 1432845541}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2b67497d34ae941a737e6c7179a7e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 357034560}
   flying: 1
   speed: 2
   minDistance: 5
@@ -677,7 +682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2b67497d34ae941a737e6c7179a7e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 357034560}
   flying: 0
   speed: 4
   minDistance: 1
