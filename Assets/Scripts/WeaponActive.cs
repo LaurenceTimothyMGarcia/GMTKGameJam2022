@@ -13,7 +13,7 @@ public class WeaponActive : MonoBehaviour
     void Start()
     {
         //Sets everything to false
-        WeaponSetActive(-1);
+        WeaponSetActive(0);
         chooseWeapon = diceTriplet.GetComponent<DiceCheck>();
     }
 
@@ -34,12 +34,6 @@ public class WeaponActive : MonoBehaviour
     {
         for (int i = 0; i < weaponArray.Length; i++)
         {
-            if (currentWeapon == -1)
-            {
-                weaponArray[i].SetActive(false);
-                continue;
-            }
-
             weaponArray[i].SetActive(i == currentWeapon);
         }
     }
