@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 5518736748760371875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3374, y: 0.3374, z: 0.3374}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.8207547, g: 0.717899, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 01990eae11894a94b89792f0981c5661, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,11 +97,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8734c2ddfe363f84094af5a9efaaa738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 30
   lifeTime: 2
-  distance: 0.5
+  distance: 0.25
   damage: 0
+  isGrenade: 0
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 192
+  projectile: {fileID: 0}
   destroyEffect: {fileID: 0}

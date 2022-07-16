@@ -33,9 +33,8 @@ public class WeaponActive : MonoBehaviour
     }
 
     //Sets everything to false except the current weapon
-    void WeaponSetActive(int currentWeapon)
+    public void WeaponSetActive(int currentWeapon)
     {
-        Debug.Log("HERE");
         for (int i = 0; i < weaponArray.Length; i++)
         {
             weaponArray[i].SetActive(i == currentWeapon);
