@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour {
     public int damage;
     public bool isGrenade;
     public LayerMask whatIsSolid;
+    public GameObject projectile;
 
     public GameObject destroyEffect;
 
@@ -36,6 +37,7 @@ public class Projectile : MonoBehaviour {
         //Instantiate(destroyEffect, transform.position, Quaternion.identity);
         if (isGrenade)
         {
+            Instantiate(projectile, transform.position, transform.rotation);
             //have it explode here
         }
 
