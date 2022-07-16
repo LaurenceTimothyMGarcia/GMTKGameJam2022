@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &357034560 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4767390417164754690, guid: 076bcd1731a3b094da58d98149c34e0c, type: 3}
-  m_PrefabInstance: {fileID: 1432845541}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &493042181
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eed5c47ef65df144a9b24c8549eec02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnedPrefab: {fileID: 0}
   walkerPrefab: {fileID: 7143151337603684985, guid: ba7e50b39fc38e0428043f57236e7306, type: 3}
   flyerPrefab: {fileID: 6899377898761361493, guid: 4c4b05e9d0fc84a438fa07a89312d8c5, type: 3}
   walkerInterval: 3.5
@@ -461,10 +457,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2369840976029298606, guid: ba7e50b39fc38e0428043f57236e7306, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 357034560}
     - target: {fileID: 7143151337603684985, guid: ba7e50b39fc38e0428043f57236e7306, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -526,10 +518,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Boss
       objectReference: {fileID: 0}
-    - target: {fileID: 3357872701340756856, guid: 8beec7573b7326647997668e9c9b70ee, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 357034560}
     - target: {fileID: 8918998642440926247, guid: 8beec7573b7326647997668e9c9b70ee, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -635,10 +623,6 @@ PrefabInstance:
       propertyPath: m_Animations.Array.data[0]
       value: 
       objectReference: {fileID: 7400000, guid: b52a07fc31871824eb7e41372d296f45, type: 2}
-    - target: {fileID: 5185956361088908275, guid: 4c4b05e9d0fc84a438fa07a89312d8c5, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 357034560}
     - target: {fileID: 5185956361088908285, guid: 4c4b05e9d0fc84a438fa07a89312d8c5, type: 3}
       propertyPath: m_Enabled
       value: 1
