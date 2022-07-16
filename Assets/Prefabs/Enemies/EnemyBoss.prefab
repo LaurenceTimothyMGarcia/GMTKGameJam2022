@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3357872701340756856}
   m_Layer: 0
   m_Name: EnemyBoss
-  m_TagString: enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &3357872701340756860
@@ -173,7 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2b67497d34ae941a737e6c7179a7e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 4767390417164754690, guid: 076bcd1731a3b094da58d98149c34e0c, type: 3}
   flying: 0
   speed: 1
   minDistance: 1
