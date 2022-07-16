@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class DiceCheck : MonoBehaviour
 {
+    WeaponActive currentWeapons;
+
     //Dice 1
-    DiceRoll dRoll1;
+    public DiceRoll dRoll1;
     [SerializeField] GameObject dice1;
     [SerializeField] int rotateDie1;
 
     //Dice 2
-    DiceRoll dRoll2;
+    public DiceRoll dRoll2;
     [SerializeField] GameObject dice2;
     [SerializeField] int rotateDie2;
 
     //Dice 3
-    DiceRoll dRoll3;
+    public DiceRoll dRoll3;
     [SerializeField] GameObject dice3;
     [SerializeField] int rotateDie3;
 
     private int[] rollResultList = new int[3];
-    private int weaponRoll;
+    public static int weaponRoll;
 
     void Awake()
     {
@@ -40,78 +42,24 @@ public class DiceCheck : MonoBehaviour
         if (dRoll1.hasRolled)
         {
             rollResultList[0] = dRoll1.GetDiceResult();
-            dRoll1.hasRolled = false;
         }
 
         if (dRoll2.hasRolled)
         {
             rollResultList[1] = dRoll2.GetDiceResult();
-            dRoll1.hasRolled = false;
         }
 
         if (dRoll3.hasRolled)
         {
             rollResultList[2] = dRoll3.GetDiceResult();
             dRoll1.hasRolled = false;
+            dRoll2.hasRolled = false;
+            dRoll3.hasRolled = false;
         }
-
-        Debug.Log("Dice 1: " + rollResultList[0]);
-        Debug.Log("Dice 2: " + rollResultList[1]);
-        Debug.Log("Dice 3: " + rollResultList[2]);
 
         weaponRoll = DiceListCheck();
 
-        switch(weaponRoll)
-        {
-            //Default gun
-            case 0:
-
-                break;
-            
-            //111 - Worst Roll, melee
-            case 1:
-                break;
-            
-            //314 - Turn into pie
-            case 2:
-                break;
-            
-            //420 - weed
-            case 3:
-                break;
-            
-            //666 - Enemies just dead, reroll
-            case 4:
-                break;
-            
-            //555 - Mario Star invinciblity
-            case 5:
-                break;
-
-            //All numbers are the same - 
-            case 6:
-                break;
-
-            //1st and 3rd die are the same - 
-            case 7:
-                break;
-            
-            //1st and 2nd die are the same - 
-            case 8:
-                break;
-            
-            //2nd and 3rd die are the same - 
-            case 9:
-                break;
-            
-            //Increasing Numbers - 
-            case 10:
-                break;
-            
-            //Decreasing Numbers - 
-            case 11:
-                break;
-        }
+        //currentWeapons.WeaponSetActive(weaponRoll);
     }
 
     int DiceListCheck()
@@ -134,7 +82,7 @@ public class DiceCheck : MonoBehaviour
         }
 
         //Rolls 420 - Something about weed
-        if (rollResultList[0] == 4 && rollResultList[1] == 2 && rollResultList[2] == 0)
+        if (rollResultList[0] == 4 && rollResultList[1] == 2 && rollResultList[2] == 1)
         {
             option = 3;
             return option;
@@ -154,47 +102,55 @@ public class DiceCheck : MonoBehaviour
             return option;
         }
 
-        //Rolls all same number
+        //Rolls all same number - Machine Gun
         if (rollResultList[0] == rollResultList[1] && rollResultList[1] == rollResultList[2])
         {
             option = 6;
             return option;
         }
 
-        //Rolls first and third die the same
+        //Rolls first and third die the same - Sniper
         if (rollResultList[0] == rollResultList[2])
         {
             option = 7;
             return option;
         }
 
-        //Rolls first and second are same
+        //Rolls first and second are same - Whip
         if (rollResultList[0] == rollResultList[1])
         {
             option = 8;
             return option;
         }
 
-        //Rolls second and third die the same
+        //Rolls second and third die the same - Bomb thrower?
         if (rollResultList[1] == rollResultList[2])
         {
             option = 9;
             return option;
         }
 
-        //Rolls consectutively increasing numbers
+        //Rolls consectutively increasing numbers - Force Push
         if ((rollResultList[0] + 2) == (rollResultList[1] + 1) && (rollResultList[1] + 1) == rollResultList[2])
         {
             option = 10;
             return option;
         }
 
-        //Rolls consectutively decreasing numbers
+        //Rolls consectutively decreasing numbers - Laser gun/eyes?
         if ((rollResultList[2] + 2) == (rollResultList[1] + 1) && (rollResultList[1] + 1) == rollResultList[0])
         {
             option = 11;
             return option;
         }
+
+        //Other options if possible//
+        /*
+            dice 1 + dice 2 = dice 3
+            dice 1 - dice 2 = dice 3
+            all evens
+            all odds
+        */
 
         return option;
     }
