@@ -13,23 +13,27 @@ public class PlayerMelee : MonoBehaviour
     void Start()
     {
         attackArea = transform.GetChild(0).gameObject;
+
     }
 
    void Update()
    {
-       if(Input.GetKeyDown(KeyCode.Mouse0)){
+        if(Input.GetKeyDown(KeyCode.Mouse1)){
+            
             Attack();
-       }
-
-       //timer
-       if(attacking)
-        timer += Time.deltaTime;
-        if(timer >= timeToAttack){
-            timer = 0;
-            attacking = false;
-            attackArea.SetActive(attacking);
         }
 
+       //timer
+        if(attacking){
+            Debug.Log("ATTACK");
+        
+            timer += Time.deltaTime;
+            if(timer >= timeToAttack){
+                timer = 0;
+                attacking = false;
+                attackArea.SetActive(attacking);
+            }
+        }
    }
 
    private void Attack(){

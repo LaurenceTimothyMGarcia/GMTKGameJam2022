@@ -17,6 +17,8 @@ public class Health : MonoBehaviour
         }
 
         if(invincibility == false){
+            Debug.Log("took damage!");
+            Debug.Log(health);
             this.health -= amount;
             if(health <= 0){
                 Death();
