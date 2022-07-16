@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class AttackArea : MonoBehaviour
 {
-   private int damage = 3; 
+   [SerializeField] private int damage = 100; 
 
    /// OnTriggerEnter is called when the Collider other enters the trigger.
-   void OnTriggerEnter2D(Collider2D collider)
+   private void OnTriggerEnter2D(Collider2D collider)
    {
-        //health is not defined this will need to be updated when health is implemented!!
-       //Health health = collider.GetComponent<Health>();
-       //health.damage(attacking);
+        //checks if collider has a health component
+        if(collider.GetComponent<Health>() != null){
+            Debug.Log("healthtrigger");
+            Health health = collider.GetComponent<Health>();
+            health.damage(damage);
+       }
    }
 }
