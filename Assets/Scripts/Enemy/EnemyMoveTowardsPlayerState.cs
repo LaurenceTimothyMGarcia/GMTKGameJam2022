@@ -2,12 +2,23 @@ using UnityEngine;
 
 public class EnemyMoveTowardsPlayerState : EnemyBaseState
 {
-    public Transform target;
+    private Transform target;
+    private Rigidbody2D rb;
     public bool flying;
     public float speed = 2f;
     public float minDistance = 1f;
     private float range;
     private Vector2 adjustedTarget;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
+        target = GameObject.Find("Player").transform;
+    }
 
     public override void EnterState(EnemyStateManager Enemy) {
         
