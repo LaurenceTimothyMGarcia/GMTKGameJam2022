@@ -7,17 +7,17 @@ public class DiceCheck : MonoBehaviour
     WeaponActive currentWeapons;
 
     //Dice 1
-    DiceRoll dRoll1;
+    public DiceRoll dRoll1;
     [SerializeField] GameObject dice1;
     [SerializeField] int rotateDie1;
 
     //Dice 2
-    DiceRoll dRoll2;
+    public DiceRoll dRoll2;
     [SerializeField] GameObject dice2;
     [SerializeField] int rotateDie2;
 
     //Dice 3
-    DiceRoll dRoll3;
+    public DiceRoll dRoll3;
     [SerializeField] GameObject dice3;
     [SerializeField] int rotateDie3;
 
@@ -48,19 +48,14 @@ public class DiceCheck : MonoBehaviour
         if (dRoll2.hasRolled)
         {
             rollResultList[1] = dRoll2.GetDiceResult();
-            dRoll1.hasRolled = false;
+            dRoll2.hasRolled = false;
         }
 
         if (dRoll3.hasRolled)
         {
             rollResultList[2] = dRoll3.GetDiceResult();
-            dRoll1.hasRolled = false;
+            dRoll3.hasRolled = false;
         }
-
-        //Debug to check list of dice
-        //Debug.Log("Dice 1: " + rollResultList[0]);
-        //Debug.Log("Dice 2: " + rollResultList[1]);
-        //Debug.Log("Dice 3: " + rollResultList[2]);
 
         weaponRoll = DiceListCheck();
 

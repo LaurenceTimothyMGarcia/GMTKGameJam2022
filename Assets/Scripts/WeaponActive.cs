@@ -21,11 +21,15 @@ public class WeaponActive : MonoBehaviour
     void Update()
     {
         Debug.Log("WEapon Roll: " + DiceCheck.weaponRoll);
+
+        if (!chooseWeapon.dRoll1.hasRolled && !chooseWeapon.dRoll2.hasRolled && !chooseWeapon.dRoll3.hasRolled)
         WeaponSetActive(DiceCheck.weaponRoll);
+
+        Debug.Log("Is weapon active? " + weaponArray[DiceCheck.weaponRoll].activeSelf);
     }
 
     //Sets everything to false except the current weapon
-    public void WeaponSetActive(int currentWeapon)
+    void WeaponSetActive(int currentWeapon)
     {
         for (int i = 0; i < weaponArray.Length; i++)
         {
@@ -35,14 +39,7 @@ public class WeaponActive : MonoBehaviour
                 continue;
             }
 
-            if (i == currentWeapon)
-            {
-                weaponArray[i].SetActive(true);
-            }
-            else
-            {
-                weaponArray[i].SetActive(false);
-            }
+            weaponArray[i].SetActive(i == currentWeapon);
         }
     }
 }
