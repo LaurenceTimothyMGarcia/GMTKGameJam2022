@@ -5,6 +5,7 @@ using UnityEngine;
 public class DiceCheck : MonoBehaviour
 {
     WeaponActive currentWeapons;
+    [SerializeField] GameObject cWeapon;
 
     //Dice 1
     public DiceRoll dRoll1;
@@ -26,6 +27,8 @@ public class DiceCheck : MonoBehaviour
 
     void Awake()
     {
+        currentWeapons = cWeapon.GetComponent<WeaponActive>();
+
         dRoll1 = dice1.GetComponent<DiceRoll>();
         dRoll1.rotateDie = rotateDie1;
 
@@ -55,9 +58,12 @@ public class DiceCheck : MonoBehaviour
             dRoll1.hasRolled = false;
             dRoll2.hasRolled = false;
             dRoll3.hasRolled = false;
+
+            weaponRoll = DiceListCheck();
+            currentWeapons.WeaponSetActive(weaponRoll);
         }
 
-        weaponRoll = DiceListCheck();
+        
 
         //currentWeapons.WeaponSetActive(weaponRoll);
     }
