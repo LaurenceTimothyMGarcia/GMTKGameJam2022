@@ -545,7 +545,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77fcd1c28dc7f1b4d96ec4f9b0123673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
 --- !u!1 &4767390417164754748
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,8 +583,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3684566457867641336}
-  - {fileID: 4767390416739969971}
   - {fileID: 8458547412391892950}
   - {fileID: 4448436421065342225}
   - {fileID: 5204420798621351381}
@@ -819,6 +816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   MAX_HEALTH: 100
+  animator: {fileID: 0}
   invincibility: 0
 --- !u!1 &4831283586479392583
 GameObject:
@@ -1379,6 +1377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7479122854787669565}
+  - component: {fileID: 405492847227719600}
   m_Layer: 0
   m_Name: EveryoneDead
   m_TagString: Untagged
@@ -1401,6 +1400,18 @@ Transform:
   m_Father: {fileID: 4767390417164754690}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &405492847227719600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8048028425478456707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98125febd0d25e74cb928fe84fb62c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6901349965805669039
 PrefabInstance:
   m_ObjectHideFlags: 0
