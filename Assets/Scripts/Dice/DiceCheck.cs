@@ -59,7 +59,7 @@ public class DiceCheck : MonoBehaviour
             dRoll2.hasRolled = false;
             dRoll3.hasRolled = false;
 
-            weaponRoll = DiceListCheck();
+            weaponRoll = DiceListCheck(rollResultList);
             currentWeapons.WeaponSetActive(weaponRoll);
         }
 
@@ -68,7 +68,7 @@ public class DiceCheck : MonoBehaviour
         //currentWeapons.WeaponSetActive(weaponRoll);
     }
 
-    int DiceListCheck()
+    private int DiceListCheck(int[] rollResultList)
     {
         //Default option is default gun
         int option = 0;
@@ -132,6 +132,7 @@ public class DiceCheck : MonoBehaviour
         //Rolls second and third die the same - Bomb thrower?
         if (rollResultList[1] == rollResultList[2])
         {
+            Debug.Log("Result 9");
             option = 9;
             return option;
         }
