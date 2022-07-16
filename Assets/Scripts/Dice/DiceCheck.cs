@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DiceCheck : MonoBehaviour
 {
+    Health life;
+    [SerializeField] GameObject player;
+
     WeaponActive currentWeapons;
     [SerializeField] GameObject cWeapon;
 
@@ -27,6 +30,8 @@ public class DiceCheck : MonoBehaviour
 
     void Awake()
     {
+        life = player.GetComponent<Health>();
+
         currentWeapons = cWeapon.GetComponent<WeaponActive>();
 
         dRoll1 = dice1.GetComponent<DiceRoll>();
@@ -59,7 +64,7 @@ public class DiceCheck : MonoBehaviour
             dRoll2.hasRolled = false;
             dRoll3.hasRolled = false;
 
-            weaponRoll = DiceListCheck();
+            weaponRoll = DiceListCheck(rollResultList);
             currentWeapons.WeaponSetActive(weaponRoll);
         }
 
@@ -68,10 +73,16 @@ public class DiceCheck : MonoBehaviour
         //currentWeapons.WeaponSetActive(weaponRoll);
     }
 
-    int DiceListCheck()
+    private int DiceListCheck(int[] rollResultList)
     {
         //Default option is default gun
         int option = 0;
+
+        Debug.Log("Dice 1 is: " + rollResultList[0]);
+        Debug.Log("Dice 2 is: " + rollResultList[1]);
+        Debug.Log("Dice 3 is: " + rollResultList[2]);
+
+        life.invincibility = false;
 
         //Rolls 111 shittiest roll, gives just melee
         if (rollResultList[0] == 1 && rollResultList[1] == 1 && rollResultList[2] == 1)

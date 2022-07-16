@@ -10,6 +10,7 @@ public class EnemyStateManager : MonoBehaviour
     /*EnemyDuckState DuckState = new EnemyDuckState();
     EnemyHopState HopState = new EnemyHopState();*/
 
+
     // Start is called before the first frame update
     void Start()
     {
