@@ -20,12 +20,13 @@ public class WeaponActive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("WEapon Roll: " + DiceCheck.weaponRoll);
-
+        //checks if dice 1 2 and 3 are not currently rolling then runs the set active
         if (!chooseWeapon.dRoll1.hasRolled && !chooseWeapon.dRoll2.hasRolled && !chooseWeapon.dRoll3.hasRolled)
-        WeaponSetActive(DiceCheck.weaponRoll);
-
-        Debug.Log("Is weapon active? " + weaponArray[DiceCheck.weaponRoll].activeSelf);
+        {
+            Debug.Log("WEapon Roll: " + DiceCheck.weaponRoll);
+            WeaponSetActive(DiceCheck.weaponRoll);
+            Debug.Log("Is weapon active? " + weaponArray[DiceCheck.weaponRoll].activeSelf);
+        }
     }
 
     //Sets everything to false except the current weapon
