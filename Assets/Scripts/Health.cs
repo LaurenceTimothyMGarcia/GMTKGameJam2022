@@ -5,11 +5,16 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int health = 100;
-    private int MAX_HEALTH = 100;
+    public int health = 100;
+    public int MAX_HEALTH = 100;
     
     //invincibility
     public bool invincibility = false;
+
+    void Start()
+    {
+        health = MAX_HEALTH;
+    }
 
     public void damage(int amount){
         if(amount < 0){
