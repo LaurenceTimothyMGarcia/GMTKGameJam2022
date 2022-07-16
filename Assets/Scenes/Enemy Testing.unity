@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ba33425aa4784478759333d78edc82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1432845542}
   offset: {x: 0, y: 2, z: -3}
   smoothFactor: 1
 --- !u!1 &913011349
@@ -527,6 +527,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 076bcd1731a3b094da58d98149c34e0c, type: 3}
+--- !u!4 &1432845542 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4767390417164754690, guid: 076bcd1731a3b094da58d98149c34e0c, type: 3}
+  m_PrefabInstance: {fileID: 1432845541}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3357872701181547003
 PrefabInstance:
   m_ObjectHideFlags: 0

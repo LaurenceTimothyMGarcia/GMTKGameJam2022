@@ -45,7 +45,7 @@ public class DiceRoll : MonoBehaviour
 
     private void StartRoll()
     {
-        StartCoroutine("RollDie");
+        StartCoroutine(RollDie());
     }
 
     private IEnumerator RollDie()
