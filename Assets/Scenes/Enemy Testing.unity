@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 913011353}
   m_Layer: 6
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -518,6 +518,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1180461174358305849, guid: 062f3d6612a6e8c4d97eb883a79ce197, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1601740545044139843, guid: 062f3d6612a6e8c4d97eb883a79ce197, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -532,7 +536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6489837494362124334, guid: 062f3d6612a6e8c4d97eb883a79ce197, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7256744434960219818, guid: 062f3d6612a6e8c4d97eb883a79ce197, type: 3}
       propertyPath: m_Name

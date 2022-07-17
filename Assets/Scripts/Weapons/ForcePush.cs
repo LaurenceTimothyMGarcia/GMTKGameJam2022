@@ -9,6 +9,7 @@ public class ForcePush : MonoBehaviour
     public float distance;
     public float forceAmount;
     public int damage;
+    public bool pierce;
     public LayerMask whatIsSolid;
     public GameObject projectile;
 
@@ -27,7 +28,10 @@ public class ForcePush : MonoBehaviour
                 hitInfo.rigidbody.AddForce(new Vector3(forceAmount, forceAmount, forceAmount), ForceMode2D.Impulse);
             }
 
-            DestroyProjectile();
+            if (!pierce || hitInfo.collider.CompareTag("Ground"))
+            {
+                DestroyProjectile();
+            }
         }
 
         transform.Translate(Vector2.up * speed * Time.deltaTime);
