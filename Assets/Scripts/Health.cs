@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
     {
         // if (Input.GetMouseButton(1))
         // {
-        //     damage(1);
+        //     heal(1);
         // }
     }
     public void damage(int amount){
@@ -65,6 +65,7 @@ public class Health : MonoBehaviour
         }else{
             health += amount;
         }
+        healthBar.setHealth(health);
 
     }
     private IEnumerator TookDamage(){
