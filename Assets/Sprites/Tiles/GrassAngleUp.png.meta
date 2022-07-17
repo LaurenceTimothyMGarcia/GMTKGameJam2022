@@ -141,7 +141,7 @@ TextureImporter:
     sprites: []
     outline: []
     physicsShape:
-    - - {x: 14, y: 16}
+    - - {x: 16, y: 16}
       - {x: -16, y: -16}
       - {x: -16, y: -16}
       - {x: 16, y: -16}
