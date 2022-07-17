@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    public bool mainTheme;
     public Sound[] sounds;
 
     // Start is called before the first frame update
@@ -22,7 +23,10 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-
+        if (mainTheme)
+        {
+            Play("Theme");
+        }
     }
 
     //Play sound by typing FindObjectOfType<AudioManager>().Play("nameOfSound");

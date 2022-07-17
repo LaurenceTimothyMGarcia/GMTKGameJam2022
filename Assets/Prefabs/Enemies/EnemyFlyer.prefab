@@ -179,7 +179,7 @@ MonoBehaviour:
   isStunned: 0
   stunTime: 10
   flying: 1
-  huntSpeed: 10
+  huntSpeed: 7
   huntRange: 10
   wanderSpeed: 2
   maxWanderDist: 2
