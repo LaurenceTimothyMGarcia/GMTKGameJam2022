@@ -102,6 +102,7 @@ MonoBehaviour:
   distance: 0.25
   damage: 100
   isGrenade: 0
+  pierce: 1
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 192

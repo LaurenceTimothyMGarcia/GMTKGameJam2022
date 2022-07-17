@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5185956361088908275}
   - component: {fileID: 9087704316331654161}
   - component: {fileID: 3898037736294920729}
+  - component: {fileID: 7506175202955784484}
   m_Layer: 7
   m_Name: EnemyFlyer
   m_TagString: Enemy
@@ -99,7 +100,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6899377898761361493}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -175,8 +176,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flying: 1
-  speed: 2
-  minDistance: 5
+  huntSpeed: 3
+  huntRange: 5
+  wanderSpeed: 2
+  maxWanderDist: 2
+  idleTime: 2
 --- !u!95 &9087704316331654161
 Animator:
   serializedVersion: 4
@@ -212,3 +216,29 @@ MonoBehaviour:
   setHealth: 100
   currentHealth: 0
   animator: {fileID: 9087704316331654161}
+--- !u!61 &7506175202955784484
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6899377898761361493}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.62, y: 0.76}
+  m_EdgeRadius: 0

@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 2369840976029298606}
   - component: {fileID: 4629698094986369217}
   - component: {fileID: 8380677635472941755}
+  - component: {fileID: 4729771626458775392}
   m_Layer: 7
   m_Name: EnemyWalker
   m_TagString: Enemy
@@ -207,8 +208,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flying: 0
-  speed: 4
-  minDistance: 1
+  huntSpeed: 3
+  huntRange: 5
+  wanderSpeed: 2
+  maxWanderDist: 2
+  idleTime: 2
 --- !u!95 &4629698094986369217
 Animator:
   serializedVersion: 4
@@ -244,3 +248,29 @@ MonoBehaviour:
   setHealth: 100
   currentHealth: 0
   animator: {fileID: 4629698094986369217}
+--- !u!61 &4729771626458775392
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7143151337603684985}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.39, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.5}
+  m_EdgeRadius: 0

@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour {
     public float distance;
     public int damage;
     public bool isGrenade;
+    public bool pierce;
     public LayerMask whatIsSolid;
     public GameObject projectile;
 
@@ -27,7 +28,10 @@ public class Projectile : MonoBehaviour {
                 hitInfo.collider.GetComponent<EnemyHealth>().TakeDamage(damage);
             }
 
-            DestroyProjectile();
+            if (!pierce || hitInfo.collider.CompareTag("Ground"))
+            {
+                DestroyProjectile();
+            }
         }
 
         transform.Translate(Vector2.up * speed * Time.deltaTime);
