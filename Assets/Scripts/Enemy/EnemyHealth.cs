@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int setHealth;
     public int currentHealth;
+    public static int enemyScore;
 
     public Animator animator;
 
@@ -25,6 +26,8 @@ public class EnemyHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            enemyScore += 100;
+
             DestroyEnemy();
         }
     }
