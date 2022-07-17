@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttackArea : MonoBehaviour
 {
    [SerializeField] private int damage = 100;
-   public float timeBtwAttacks = 1f;
+   
 
    /// OnTriggerEnter is called when the Collider other enters the trigger.
    private void OnTriggerEnter2D(Collider2D collider)
