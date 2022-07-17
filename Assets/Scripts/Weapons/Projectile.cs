@@ -14,6 +14,8 @@ public class Projectile : MonoBehaviour {
     public LayerMask whatIsSolid;
     public GameObject projectile;
 
+    public bool isPie;
+
     public GameObject destroyEffect;
 
     private void Start() {
@@ -31,6 +33,11 @@ public class Projectile : MonoBehaviour {
                 {
                     hitInfo.collider.GetComponent<EnemyBehavior>().BecomeStunned();
                 }
+            }
+
+            if (isPie)
+            {
+                FindObjectOfType<AudioManager>().Play("PieInFace");
             }
 
             if (!pierce || hitInfo.collider.CompareTag("Ground"))

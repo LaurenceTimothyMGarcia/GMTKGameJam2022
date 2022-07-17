@@ -63,10 +63,10 @@ MonoBehaviour:
     pitch: 0.75
     loop: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: PieInFace
+    clip: {fileID: 8300000, guid: 46006298a6c2afd4383096939525a7c3, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: 
