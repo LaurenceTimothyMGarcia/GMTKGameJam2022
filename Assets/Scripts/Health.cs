@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -46,7 +47,9 @@ public class Health : MonoBehaviour
 
     public void Death(){
         Debug.Log("YOU DIED  --  GAME OVER");
+        SceneManager.LoadScene("GameOver");
         Destroy(gameObject);
+        
     }
 
     //one of numbers will heal 
