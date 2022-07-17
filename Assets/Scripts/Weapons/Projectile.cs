@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ForcePush : MonoBehaviour
-{
+public class Projectile : MonoBehaviour {
+
     public float speed;
     public float lifeTime;
     public float distance;
     public int damage;
+    public bool isGrenade;
+    public bool pierce;
     public LayerMask whatIsSolid;
     public GameObject projectile;
 
@@ -23,17 +25,26 @@ public class ForcePush : MonoBehaviour
         if (hitInfo.collider != null) {
             if (hitInfo.collider.CompareTag("Enemy")) 
             {
-                //hitInfo.collider.gameObject.;
+                hitInfo.collider.GetComponent<EnemyHealth>().TakeDamage(damage);
             }
 
-            DestroyProjectile();
+            if (!pierce || hitInfo.collider.CompareTag("Ground"))
+            {
+                DestroyProjectile();
+            }
         }
 
         transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
 
-    void DestroyProjectile() 
-    {
+    void DestroyProjectile() {
+        //Instantiate(destroyEffect, transform.position, Quaternion.identity);
+        if (isGrenade)
+        {
+            Instantiate(projectile, transform.position, transform.rotation);
+            //have it explode here
+        }
+
         Destroy(gameObject);
     }
 }

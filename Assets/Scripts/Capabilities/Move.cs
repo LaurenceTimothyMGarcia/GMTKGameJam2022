@@ -19,7 +19,9 @@ public class Move : MonoBehaviour
     private float _maxSpeedChange;
     private float _acceleration;
     private bool _onGround;
-
+    public Animator animator;
+    public SpriteRenderer renderer;
+    
     void Awake()
     {
         _body = GetComponent<Rigidbody2D>();
@@ -29,8 +31,30 @@ public class Move : MonoBehaviour
 
     void Update()
     {
+        //animator.SetTrigger("Still");
         _direction.x = _controller.input.RetrieveMoveInput();
         _desiredVelocity = new Vector2(_direction.x,0f) * Mathf.Max(_maxSpeed - _ground.Friction, 0f);
+        //if (_desiredVelocity.x != 0)
+        //  if(_desiredVelocity.x < 0)
+        
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+
+        if(_desiredVelocity.x != 0){
+            if(difference.x < 0)
+            {
+                //flipping character
+                //gameObject.transform.localScale = new Vector3(-1,1,1);
+                renderer.flipX = true;
+            }
+            else
+            {
+                //gameObject.transform.localScale = new Vector3(1,1,1);
+                renderer.flipX = false;
+            }
+            animator.SetTrigger("IsMoving");
+        }else{
+            animator.SetTrigger("Still");
+        }
     }
 
     private void FixedUpdate()
@@ -44,4 +68,5 @@ public class Move : MonoBehaviour
 
         _body.velocity = _velocity;
     }
+    //need help 
 }
