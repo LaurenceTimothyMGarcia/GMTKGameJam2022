@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4932614081395095136}
-  - component: {fileID: 4932614081395095137}
+  - component: {fileID: 5614372783609346295}
   m_Layer: 0
-  m_Name: Enemy Spawner
+  m_Name: SpawnerFlyer
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4932614081395095137
+--- !u!114 &5614372783609346295
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,11 +41,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4932614081395095138}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eed5c47ef65df144a9b24c8549eec02, type: 3}
+  m_Script: {fileID: 11500000, guid: ebcae806653c2074681532bf4619ea2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnedPrefab: {fileID: 0}
-  walkerPrefab: {fileID: 7143151337603684985, guid: ba7e50b39fc38e0428043f57236e7306, type: 3}
-  flyerPrefab: {fileID: 6899377898761361493, guid: 4c4b05e9d0fc84a438fa07a89312d8c5, type: 3}
-  walkerInterval: 3.5
-  flyerInterval: 5
+  enemyPrefab: {fileID: 6899377898761361493, guid: 4c4b05e9d0fc84a438fa07a89312d8c5, type: 3}
+  initialInterval: 0
+  spawnInterval: 5
+  spawnWidth: 3
+  spawnHeight: 3

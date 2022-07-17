@@ -5,16 +5,27 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int health = 100;
+    public int health;
     public int MAX_HEALTH = 100;
     public Animator animator;
     //invincibility
+    public Healthbar healthBar;
     public bool invincibility = false;
     /// <summary>
     /// Update is called every frame, if the MonoBehaviour is enabled.
     /// </summary>
+
+    void Start()
+    {
+        health = MAX_HEALTH;
+        healthBar.setMaxHealth(MAX_HEALTH);
+    }
     void Update()
     {
+        // if (Input.GetMouseButton(1))
+        // {
+        //     damage(1);
+        // }
     }
     public void damage(int amount){
         if(amount < 0){
@@ -26,6 +37,7 @@ public class Health : MonoBehaviour
             Debug.Log(health);
             this.health -= amount;
             StartCoroutine(TookDamage());
+            healthBar.setHealth(health);
             if(health <= 0){
                 Death();
             }

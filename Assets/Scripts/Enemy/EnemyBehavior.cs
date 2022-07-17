@@ -14,6 +14,8 @@ public class EnemyBehavior : EnemyBaseState
     public float maxWanderDist;
     public float idleTime;
     public bool idleReady = true;
+    public int enemyDamage = 5;
+    public float knockbackForce;
 
     private Transform target; // player
     private Vector2 adjustedTarget;
@@ -111,34 +113,42 @@ public class EnemyBehavior : EnemyBaseState
     //Either sets a wander waypoint or idles
     IEnumerator SetNextAction() {
         if (Random.Range(0, 10) >= 7) {
-            Debug.Log("here");
             idling = true;
             yield return new WaitForSeconds(idleTime);
             idling = false;
         }
         waypoint = new Vector3(Random.Range(transform.position.x - maxWanderDist, transform.position.x + maxWanderDist),
                                Random.Range(transform.position.y - maxWanderDist, transform.position.y + maxWanderDist), transform.position.z);
-        Debug.Log(waypoint.x);
 
     }
 
-    // change direction when hitting a wall
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Ground") {
             waypoint = new Vector3(transform.position.x - (waypoint.x - transform.position.x), 
                                    transform.position.y - (waypoint.y - transform.position.y), transform.position.z);
-            Debug.Log(waypoint.x);
+        }
+        if (collision.CompareTag("Player"))
+        {
+            Debug.Log("Enemey hit palyer");
+            Health play = collision.GetComponent<Health>();
+
+            play.damage(enemyDamage);
+            if (target.position.x < transform.position.x)
+            {
+                target.GetComponent<Rigidbody2D>().AddForce(Vector2.left * knockbackForce);
+            }
+            else
+            {
+                target.GetComponent<Rigidbody2D>().AddForce(Vector2.right * knockbackForce);
+            }
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision) {
         if (collision.gameObject.tag == "Ground" && lostTarget) {
-            Debug.Log("lost");
             waypoint = new Vector3(transform.position.x - target.position.x,
                                    transform.position.y - target.position.y, transform.position.z).normalized;
-            Debug.Log(waypoint.ToString());
             waypoint = new Vector3(transform.position.x + (waypoint.x * 2), transform.position.y + (waypoint.y * 2), transform.position.z);
-            Debug.Log(waypoint.ToString());
             lostTarget = false;
         }
     }

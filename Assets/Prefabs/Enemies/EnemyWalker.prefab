@@ -216,6 +216,9 @@ MonoBehaviour:
   wanderSpeed: 2
   maxWanderDist: 2
   idleTime: 2
+  idleReady: 1
+  enemyDamage: 5
+  knockbackForce: 300
 --- !u!95 &4629698094986369217
 Animator:
   serializedVersion: 4

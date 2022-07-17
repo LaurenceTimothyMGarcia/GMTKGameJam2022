@@ -12,7 +12,7 @@ public class AttackArea : MonoBehaviour
    {
         //checks if collider has a health component
         if(collider.GetComponent<EnemyHealth>() != null){
-            Debug.Log("healthtrigger");
+            //Debug.Log("healthtrigger");
             EnemyHealth health = collider.GetComponent<EnemyHealth>();
             health.TakeDamage(damage);
        }
