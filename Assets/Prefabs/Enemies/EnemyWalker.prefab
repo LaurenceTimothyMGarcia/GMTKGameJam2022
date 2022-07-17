@@ -65,7 +65,7 @@ Transform:
   m_GameObject: {fileID: 7143151337603684985}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.9, y: -2.78, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2369840976605794063}
@@ -216,6 +216,7 @@ MonoBehaviour:
   wanderSpeed: 2
   maxWanderDist: 2
   idleTime: 2
+  idleReady: 1
 --- !u!95 &4629698094986369217
 Animator:
   serializedVersion: 4

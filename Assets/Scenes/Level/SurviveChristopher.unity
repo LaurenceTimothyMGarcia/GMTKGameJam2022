@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4932614081395095136, guid: a3ba9f25c7a71bb47be713fd2be8e6d6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4932614081395095136, guid: a3ba9f25c7a71bb47be713fd2be8e6d6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -177,6 +177,10 @@ PrefabInstance:
     - target: {fileID: 4932614081395095138, guid: a3ba9f25c7a71bb47be713fd2be8e6d6, type: 3}
       propertyPath: m_Name
       value: SpawnerWalker
+      objectReference: {fileID: 0}
+    - target: {fileID: 6244581083400977618, guid: a3ba9f25c7a71bb47be713fd2be8e6d6, type: 3}
+      propertyPath: spawnDistance
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3ba9f25c7a71bb47be713fd2be8e6d6, type: 3}
@@ -10222,6 +10226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Spawner
       objectReference: {fileID: 0}
+    - target: {fileID: 6244581083400977618, guid: a3ba9f25c7a71bb47be713fd2be8e6d6, type: 3}
+      propertyPath: spawnDistance
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3ba9f25c7a71bb47be713fd2be8e6d6, type: 3}
 --- !u!1 &747868640
@@ -10267,7 +10275,7 @@ Transform:
   m_Children:
   - {fileID: 166488804}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1167135226
 PrefabInstance:
@@ -10294,7 +10302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2681970842619416277, guid: 03e65889f016fb643a7a65e65c7f106a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2681970842619416277, guid: 03e65889f016fb643a7a65e65c7f106a, type: 3}
       propertyPath: m_AnchorMax.x
@@ -10565,7 +10573,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4932614081395095136, guid: ca53679d46f764d449e75ba2e6fe795a, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4932614081395095136, guid: ca53679d46f764d449e75ba2e6fe795a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10622,7 +10630,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4932614081395095136, guid: ca53679d46f764d449e75ba2e6fe795a, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4932614081395095136, guid: ca53679d46f764d449e75ba2e6fe795a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10781,6 +10789,10 @@ PrefabInstance:
     - target: {fileID: 4932614081395095138, guid: a3ba9f25c7a71bb47be713fd2be8e6d6, type: 3}
       propertyPath: m_Name
       value: Enemy Spawner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6244581083400977618, guid: a3ba9f25c7a71bb47be713fd2be8e6d6, type: 3}
+      propertyPath: spawnDistance
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3ba9f25c7a71bb47be713fd2be8e6d6, type: 3}
