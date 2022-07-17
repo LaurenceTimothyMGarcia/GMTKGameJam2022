@@ -207,6 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2b67497d34ae941a737e6c7179a7e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 4629698094986369217}
   isStunned: 0
   stunTime: 10
   flying: 0

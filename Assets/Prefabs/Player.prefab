@@ -648,7 +648,7 @@ MonoBehaviour:
   shotEffect: {fileID: 0}
   shotPoint: {fileID: 4812809724216832899}
   renderer: {fileID: 2379834306051112694}
-  startTimeBtwShots: 0
+  startTimeBtwShots: 0.5
 --- !u!1 &3483016801906625652
 GameObject:
   m_ObjectHideFlags: 0

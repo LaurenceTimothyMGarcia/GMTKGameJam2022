@@ -27,9 +27,9 @@ public class Projectile : MonoBehaviour {
             if (hitInfo.collider.CompareTag("Enemy")) 
             {
                 hitInfo.collider.GetComponent<EnemyHealth>().TakeDamage(damage);
-                if (canStun)
+                if (canStun && !hitInfo.collider.GetComponent<EnemyBehavior>().isStunned)
                 {
-                    hitInfo.collider.GetComponent<EnemyBehavior>().isStunned = true;
+                    hitInfo.collider.GetComponent<EnemyBehavior>().BecomeStunned();
                 }
             }
 
