@@ -15,6 +15,7 @@ public class EnemyBehavior : EnemyBaseState
     public float idleTime;
     public bool idleReady = true;
     public int enemyDamage = 5;
+    public float knockbackForce;
 
     private Transform target; // player
     private Vector2 adjustedTarget;
@@ -121,21 +122,25 @@ public class EnemyBehavior : EnemyBaseState
 
     }
 
-    private void OnCollisionEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            Debug.Log("Enemey hit palyer");
-            Health play = collision.GetComponent<Health>();
-            play.damage(enemyDamage);
-        }
-    }
-
-    // change direction when hitting a wall
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag == "Ground") {
             waypoint = new Vector3(transform.position.x - (waypoint.x - transform.position.x), 
                                    transform.position.y - (waypoint.y - transform.position.y), transform.position.z);
+        }
+        if (collision.CompareTag("Player"))
+        {
+            Debug.Log("Enemey hit palyer");
+            Health play = collision.GetComponent<Health>();
+
+            play.damage(enemyDamage);
+            if (target.position.x < transform.position.x)
+            {
+                target.GetComponent<Rigidbody2D>().AddForce(Vector2.left * knockbackForce);
+            }
+            else
+            {
+                target.GetComponent<Rigidbody2D>().AddForce(Vector2.right * knockbackForce);
+            }
         }
     }
 
