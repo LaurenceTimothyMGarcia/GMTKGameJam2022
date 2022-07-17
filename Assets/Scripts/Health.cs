@@ -8,18 +8,11 @@ public class Health : MonoBehaviour
     public int health = 100;
     public int MAX_HEALTH = 100;
     public Animator animator;
-
     //invincibility
     public bool invincibility = false;
     /// <summary>
     /// Update is called every frame, if the MonoBehaviour is enabled.
     /// </summary>
-
-    void Start()
-    {
-        health = MAX_HEALTH;
-    }
-
     void Update()
     {
         /*if(Input.GetKeyUp(KeyCode.Mouse0)){
@@ -33,7 +26,7 @@ public class Health : MonoBehaviour
         }
         
         if(invincibility == false){
-            Debug.Log("took damage!");
+            //Debug.Log("took damage!");
             Debug.Log(health);
             this.health -= amount;
             StartCoroutine(TookDamage());
