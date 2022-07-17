@@ -13,8 +13,8 @@ public class Projectile : MonoBehaviour {
     public LayerMask whatIsSolid;
     public GameObject projectile;
 
-    AudioManager bulletSound;
-    GameObject bSound;
+    //AudioManager bulletSound;
+    //public GameObject bSound;
 
     public bool isPistol;
     public bool isMachine;
@@ -28,7 +28,7 @@ public class Projectile : MonoBehaviour {
     public GameObject destroyEffect;
 
     private void Start() {
-        bulletSound = GetComponent<AudioManager>();
+        //bulletSound = GetComponent<AudioManager>();
         PlaySound();
 
         Invoke("DestroyProjectile", lifeTime);
@@ -49,7 +49,7 @@ public class Projectile : MonoBehaviour {
 
             if (isPie)
             {
-                bulletSound.Play("PieInFace");
+                FindObjectOfType<AudioManager>().Play("PieInFace");
             }
 
             if (!pierce || hitInfo.collider.CompareTag("Ground"))
@@ -76,37 +76,37 @@ public class Projectile : MonoBehaviour {
     {
         if (isPistol)
         {
-            bulletSound.Play("Pistol");
+            FindObjectOfType<AudioManager>().Play("Pistol");
         }
 
         if (isMachine)
         {
-            bulletSound.Play("MachineGun");
+            FindObjectOfType<AudioManager>().Play("MachineGun");
         }
 
         if (isSnipe)
         {
-            bulletSound.Play("Sniper");
+            FindObjectOfType<AudioManager>().Play("Sniper");
         }
 
         if (isWhip)
         {
-            bulletSound.Play("Whip");
+            FindObjectOfType<AudioManager>().Play("Whip");
         }
 
         if (isGrenade)
         {
-            bulletSound.Play("Grenade");
+            FindObjectOfType<AudioManager>().Play("Grenade");
         }
 
         if (isForce)
         {
-            bulletSound.Play("ForcePush");
+            FindObjectOfType<AudioManager>().Play("ForcePush");
         }
 
         if (isLaser)
         {
-            bulletSound.Play("LaserGun");
+            FindObjectOfType<AudioManager>().Play("LaserGun");
         }
     }
 }

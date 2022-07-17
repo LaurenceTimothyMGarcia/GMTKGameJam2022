@@ -13,12 +13,12 @@ public class PlayerMelee : MonoBehaviour
     private float timeBtwAttacks;
     public float startTimeBtwAttacks;
 
-    AudioManager bulletSound;
-    GameObject bSound;
+    //AudioManager bulletSound;
+    //GameObject bSound;
 
     void Start()
     {
-        bulletSound = GetComponent<AudioManager>();
+        //bulletSound = GetComponent<AudioManager>();
 
         attackArea = transform.GetChild(1).gameObject;
         attackArea.SetActive(false);
@@ -76,7 +76,7 @@ public class PlayerMelee : MonoBehaviour
    }
 
     private void Attack(){
-        bulletSound.Play("Whip");
+        FindObjectOfType<AudioManager>().Play("Whip");
         attacking = true;
         attackArea.SetActive(attacking);  
    }

@@ -15,12 +15,12 @@ public class ForcePush : MonoBehaviour
 
     public GameObject destroyEffect;
 
-    AudioManager bulletSound;
-    GameObject bSound;
+    //AudioManager bulletSound;
+    //GameObject bSound;
 
     private void Start() {
-        bulletSound = GetComponent<AudioManager>();
-        bulletSound.Play("ForcePush");
+        //bulletSound = GetComponent<AudioManager>();
+        FindObjectOfType<AudioManager>().Play("ForcePush");
         Invoke("DestroyProjectile", lifeTime);
     }
 
