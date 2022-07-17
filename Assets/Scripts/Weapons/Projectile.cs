@@ -24,6 +24,7 @@ public class Projectile : MonoBehaviour {
     public bool isLaser;
     public bool isPie;
     public bool isGrenade;
+    public bool isExplode;
 
     public GameObject destroyEffect;
 
@@ -107,6 +108,11 @@ public class Projectile : MonoBehaviour {
         if (isLaser)
         {
             FindObjectOfType<AudioManager>().Play("LaserGun");
+        }
+
+        if (isExplode)
+        {
+            FindObjectOfType<AudioManager>().Play("Explode");
         }
     }
 }

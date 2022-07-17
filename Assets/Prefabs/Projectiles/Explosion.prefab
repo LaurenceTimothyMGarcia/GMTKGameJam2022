@@ -103,14 +103,21 @@ MonoBehaviour:
   lifeTime: 0.5
   distance: 0
   damage: 100
-  isGrenade: 0
   pierce: 0
   canStun: 0
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 0
   projectile: {fileID: 0}
+  isPistol: 0
+  isMachine: 0
+  isSnipe: 0
+  isWhip: 0
+  isForce: 0
+  isLaser: 0
   isPie: 0
+  isGrenade: 0
+  isExplode: 1
   destroyEffect: {fileID: 0}
 --- !u!50 &-2359910850768659482
 Rigidbody2D:
