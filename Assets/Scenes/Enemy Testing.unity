@@ -471,7 +471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1180461174358305849, guid: 062f3d6612a6e8c4d97eb883a79ce197, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1601740545044139843, guid: 062f3d6612a6e8c4d97eb883a79ce197, type: 3}
       propertyPath: m_IsActive
@@ -492,6 +492,10 @@ PrefabInstance:
     - target: {fileID: 7256744434960219818, guid: 062f3d6612a6e8c4d97eb883a79ce197, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7818779224544704890, guid: 062f3d6612a6e8c4d97eb883a79ce197, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8506187993717406330, guid: 062f3d6612a6e8c4d97eb883a79ce197, type: 3}
       propertyPath: m_IsActive
