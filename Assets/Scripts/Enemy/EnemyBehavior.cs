@@ -3,8 +3,10 @@ using UnityEngine;
 
 public class EnemyBehavior : EnemyBaseState
 {
+    public Animator animator;
     public bool isStunned;
     public float stunTime;
+    private float currentStunTime;
     public bool flying;
     public float huntSpeed = 2f;    //speed when moving towards player
     public float huntRange = 5f;
@@ -44,12 +46,14 @@ public class EnemyBehavior : EnemyBaseState
 
     void FixedUpdate()
     {
-        if (isStunned)
+        if (isStunned && currentStunTime >= 0)
         {
-            StartCoroutine(Stunned());
+            animator.SetBool("isSleep", true);
         }
         else
         {
+            currentStunTime = stunTime;
+            animator.SetBool("isSleep", false);
             if (Vector2.Distance(transform.position, target.position) <= huntRange)
             {
                 hunting = true;
@@ -135,10 +139,5 @@ public class EnemyBehavior : EnemyBaseState
         isStunned = true;
     }
 
-    private IEnumerator Stunned()
-    {
-        yield return new WaitForSeconds(stunTime);
-        isStunned = false;
-    }
 
 }
