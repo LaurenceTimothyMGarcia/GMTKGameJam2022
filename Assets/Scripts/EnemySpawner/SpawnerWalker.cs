@@ -25,7 +25,7 @@ public class SpawnerWalker : MonoBehaviour
         initialWait = false;
         GameObject newEnemy = Instantiate(enemy, transform.position + new Vector3(Random.Range(-spawnWidth, spawnWidth), 0f, 0), Quaternion.identity);
         //newEnemy.type = enemy;
-        StartCoroutine(spawnEnemyFloor(interval, enemy));
         yield return new WaitForSeconds(interval);
+        StartCoroutine(spawnEnemyFloor(interval, enemy));
     }
 }
