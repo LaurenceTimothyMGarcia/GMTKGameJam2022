@@ -13,6 +13,7 @@ public class EnemyBehavior : EnemyBaseState
     public float wanderSpeed = 1f;
     public float maxWanderDist;
     public float idleTime;
+    public bool idleReady = true;
 
     private Transform target; // player
     private Vector2 adjustedTarget;
@@ -57,14 +58,22 @@ public class EnemyBehavior : EnemyBaseState
             if (Vector2.Distance(transform.position, target.position) <= huntRange)
             {
                 hunting = true;
+                if (idleReady)
+                {
+                    FindObjectOfType<AudioManager>().Play("AlienApproach");
+                    idleReady = false;
+                }
+                
                 MoveTowardsPlayer();
             }
             else if (!idling)
             {
                 if (hunting)
                 {
+                    FindObjectOfType<AudioManager>().Play("AlienIdle");
                     hunting = false;
                     lostTarget = true;
+                    idleReady = true;
                 }
 
                 //flip enemy if needed
