@@ -10,18 +10,21 @@ public class DiceCheck : MonoBehaviour
     WeaponActive currentWeapons;
     [SerializeField] GameObject cWeapon;
 
+    [HideInInspector] public AudioManager diceSound;
+    [SerializeField] GameObject dSound;
+
     //Dice 1
-    public DiceRoll dRoll1;
+    [HideInInspector] public DiceRoll dRoll1;
     [SerializeField] GameObject dice1;
     [SerializeField] int rotateDie1;
 
     //Dice 2
-    public DiceRoll dRoll2;
+    [HideInInspector] public DiceRoll dRoll2;
     [SerializeField] GameObject dice2;
     [SerializeField] int rotateDie2;
 
     //Dice 3
-    public DiceRoll dRoll3;
+    [HideInInspector] public DiceRoll dRoll3;
     [SerializeField] GameObject dice3;
     [SerializeField] int rotateDie3;
 
@@ -42,6 +45,8 @@ public class DiceCheck : MonoBehaviour
 
         dRoll3 = dice3.GetComponent<DiceRoll>();
         dRoll3.rotateDie = rotateDie3;
+
+        diceSound = dSound.GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -60,6 +65,7 @@ public class DiceCheck : MonoBehaviour
         if (dRoll3.hasRolled)
         {
             rollResultList[2] = dRoll3.GetDiceResult();
+            diceSound.Play("DiceResult");
             dRoll1.hasRolled = false;
             dRoll2.hasRolled = false;
             dRoll3.hasRolled = false;

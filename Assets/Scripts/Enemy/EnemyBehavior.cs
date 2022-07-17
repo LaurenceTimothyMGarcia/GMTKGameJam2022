@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class EnemyBehavior : EnemyBaseState
 {
+    public Animator animator;
+    public bool isStunned;
+    public float stunTime;
+    private float currentStunTime;
     public bool flying;
     public float huntSpeed = 2f;    //speed when moving towards player
     public float huntRange = 5f;
@@ -42,33 +46,45 @@ public class EnemyBehavior : EnemyBaseState
 
     void FixedUpdate()
     {
-        if (Vector2.Distance(transform.position, target.position) <= huntRange) {
-            hunting = true;
-            MoveTowardsPlayer();
+        if (isStunned && currentStunTime >= 0)
+        {
+            animator.SetBool("isSleep", true);
         }
-
-        else if (!idling) {
-            if (hunting) {
-                hunting = false;
-                lostTarget = true;
+        else
+        {
+            currentStunTime = stunTime;
+            animator.SetBool("isSleep", false);
+            if (Vector2.Distance(transform.position, target.position) <= huntRange)
+            {
+                hunting = true;
+                MoveTowardsPlayer();
             }
+            else if (!idling)
+            {
+                if (hunting)
+                {
+                    hunting = false;
+                    lostTarget = true;
+                }
 
-            //flip enemy if needed
-            if ((waypoint.x > transform.position.x && transform.localScale.x > 0) || (waypoint.x < transform.position.x && transform.localScale.x < 0)) {
-                transform.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
-            }
+                //flip enemy if needed
+                if ((waypoint.x > transform.position.x && transform.localScale.x > 0) || (waypoint.x < transform.position.x && transform.localScale.x < 0)) {
+                    transform.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
+                }
 
-            if (flying) {
-                transform.position = Vector2.MoveTowards(transform.position, waypoint, wanderSpeed * Time.deltaTime);
-            }
-            else {
-                transform.position = new Vector3(Mathf.MoveTowards(transform.position.x, waypoint.x, wanderSpeed * Time.deltaTime), transform.position.y, transform.position.z);
-            }
+                if (flying) {
+                    transform.position = Vector2.MoveTowards(transform.position, waypoint, wanderSpeed * Time.deltaTime);
+                }
+                else {
+                    transform.position = new Vector3(Mathf.MoveTowards(transform.position.x, waypoint.x, wanderSpeed * Time.deltaTime), transform.position.y, transform.position.z);
+                }
 
-            if (transform.position == waypoint || (!flying && transform.position.x == waypoint.x)) {
-                StartCoroutine("SetNextAction");
+                if (transform.position == waypoint || (!flying && transform.position.x == waypoint.x)) {
+                    StartCoroutine("SetNextAction");
+                }
             }
         }
+        
     }
 
     void MoveTowardsPlayer() {
@@ -117,5 +133,11 @@ public class EnemyBehavior : EnemyBaseState
             lostTarget = false;
         }
     }
+
+    public void BecomeStunned()
+    {
+        isStunned = true;
+    }
+
 
 }

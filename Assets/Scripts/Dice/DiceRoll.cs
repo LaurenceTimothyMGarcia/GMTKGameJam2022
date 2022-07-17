@@ -8,6 +8,8 @@ public class DiceRoll : MonoBehaviour
     public int rotateDie;
     public int diceResult;
 
+    public GameObject dice;
+
     //Array of dice sprites
     private Sprite[] diceSides;
     //Sprite renderer to change sprite
@@ -45,7 +47,10 @@ public class DiceRoll : MonoBehaviour
 
     private void StartRoll()
     {
+        DiceCheck dSound = dice.GetComponent<DiceCheck>();
+        dSound.diceSound.Play("DiceRolling");
         StartCoroutine(RollDie());
+        dSound.diceSound.StopPlaying("DiceRolling");
     }
 
     private IEnumerator RollDie()

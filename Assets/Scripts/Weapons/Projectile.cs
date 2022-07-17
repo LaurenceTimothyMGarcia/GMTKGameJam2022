@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour {
     public int damage;
     public bool isGrenade;
     public bool pierce;
+    public bool canStun;
     public LayerMask whatIsSolid;
     public GameObject projectile;
 
@@ -26,6 +27,10 @@ public class Projectile : MonoBehaviour {
             if (hitInfo.collider.CompareTag("Enemy")) 
             {
                 hitInfo.collider.GetComponent<EnemyHealth>().TakeDamage(damage);
+                if (canStun && !hitInfo.collider.GetComponent<EnemyBehavior>().isStunned)
+                {
+                    hitInfo.collider.GetComponent<EnemyBehavior>().BecomeStunned();
+                }
             }
 
             if (!pierce || hitInfo.collider.CompareTag("Ground"))
