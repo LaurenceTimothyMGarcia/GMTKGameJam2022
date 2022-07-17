@@ -11,8 +11,9 @@ public class Stopwatch : MonoBehaviour
     public float currentTime;
     public Text currentTimeText;
 
-    int score;
+    public static int score;
     public Text scoreText;
+    //public TMP_Text totalScoreText;
     public float multiplier = 5;
 
     // Start is called before the first frame update
@@ -37,6 +38,7 @@ public class Stopwatch : MonoBehaviour
         scoreText.text = score.ToString();
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
         currentTimeText.text = time.ToString(@"mm\:ss\:fff");
+        //totalScoreText.text = score.ToString() + " POINTS";
     }
 
     public void startStopwatch()

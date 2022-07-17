@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int setHealth;
     public int currentHealth;
+    public static int enemyScore;
 
     public Animator animator;
 
@@ -20,6 +21,8 @@ public class EnemyHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            enemyScore += 1000;
+
             DestroyEnemy();
         }
     }
@@ -36,6 +39,7 @@ public class EnemyHealth : MonoBehaviour
     void DestroyEnemy()
     {
         Destroy(gameObject);
+        //Stopwatch.score += 1000;
     }
     private IEnumerator Damage()
     {

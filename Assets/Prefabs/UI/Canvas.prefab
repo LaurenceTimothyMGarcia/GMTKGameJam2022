@@ -194,7 +194,7 @@ MonoBehaviour:
   currentTime: 0
   currentTimeText: {fileID: 6234882854257718757}
   scoreText: {fileID: 6234882854257718757}
-  multiplier: 5
+  multiplier: 1
 --- !u!1 &2681970842721634305
 GameObject:
   m_ObjectHideFlags: 0
