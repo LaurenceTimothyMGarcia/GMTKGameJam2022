@@ -9,10 +9,15 @@ public class EnemyHealth : MonoBehaviour
 
     public Animator animator;
 
+    private GameObject player;
+
+    private Health playerHealth;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = setHealth;
+        player = GameObject.Find("Player");
+        playerHealth = player.GetComponent<Health>();
     }
 
     // Update is called once per frame
@@ -36,6 +41,7 @@ public class EnemyHealth : MonoBehaviour
     void DestroyEnemy()
     {
         Destroy(gameObject);
+        playerHealth.heal(5);
     }
     private IEnumerator Damage()
     {
