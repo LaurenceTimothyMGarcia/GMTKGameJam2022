@@ -16,6 +16,7 @@ public class PlayerMelee : MonoBehaviour
     {
         attackArea = transform.GetChild(1).gameObject;
         attackArea.SetActive(false);
+        renderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
    void Update()
@@ -51,6 +52,7 @@ public class PlayerMelee : MonoBehaviour
         //reset attack
         if(attacking){
             //counts
+            renderer.enabled = false;
             timer += Time.deltaTime;
             if(timer >= timeToAttack){
                 //resets timer
@@ -58,6 +60,10 @@ public class PlayerMelee : MonoBehaviour
                 attacking = false;
                 attackArea.SetActive(attacking);
             }
+        }
+        else
+        {
+            renderer.enabled = true;
         }
 
 
