@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SpawnerWalker : MonoBehaviour
 {
+    [SerializeField] private int spawnMax = 50;
+    private int spawns = 0;
+
     //[SerializeField] private GameObject spawnedPrefab;
     [SerializeField] public GameObject enemyPrefab;
 
@@ -25,7 +28,8 @@ public class SpawnerWalker : MonoBehaviour
         initialWait = false;
         GameObject newEnemy = Instantiate(enemy, transform.position + new Vector3(Random.Range(-spawnWidth, spawnWidth), 0f, 0), Quaternion.identity);
         //newEnemy.type = enemy;
+        spawns++;
         yield return new WaitForSeconds(interval);
-        StartCoroutine(spawnEnemyFloor(interval, enemy));
+        if (spawns < spawnMax) StartCoroutine(spawnEnemyFloor(interval, enemy));
     }
 }
