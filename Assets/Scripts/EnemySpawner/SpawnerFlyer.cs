@@ -26,7 +26,7 @@ public class SpawnerFlyer : MonoBehaviour
         initialWait = false;
         GameObject newEnemy = Instantiate(enemy, transform.position + new Vector3(Random.Range(-spawnWidth, spawnWidth), Random.Range(-spawnHeight, spawnHeight), 0), Quaternion.identity);
         //newEnemy.type = enemy;
-        StartCoroutine(spawnEnemyAir(interval, enemy));
         yield return new WaitForSeconds(interval);
+        StartCoroutine(spawnEnemyAir(interval, enemy));
     }
 }
