@@ -6,8 +6,6 @@ public class SpawnerFlyer : MonoBehaviour
 {
     private Transform player;
     [SerializeField] private float spawnDistance = 15f;
-    [SerializeField] private int spawnMax = 10;
-    private int spawns = 0;
 
     //[SerializeField] private GameObject spawnedPrefab;
     [SerializeField] public GameObject enemyPrefab;
@@ -33,10 +31,9 @@ public class SpawnerFlyer : MonoBehaviour
             initialWait = false;
             GameObject newEnemy = Instantiate(enemy, transform.position + new Vector3(Random.Range(-spawnWidth, spawnWidth), Random.Range(-spawnHeight, spawnHeight), 0), Quaternion.identity);
             //newEnemy.type = enemy;
-            spawns++;
             yield return new WaitForSeconds(interval);
         }
         else yield return new WaitForSeconds(.1f);
-        if (spawns < spawnMax) StartCoroutine(spawnEnemyAir(interval, enemy));
+        StartCoroutine(spawnEnemyAir(interval, enemy));
     }
 }

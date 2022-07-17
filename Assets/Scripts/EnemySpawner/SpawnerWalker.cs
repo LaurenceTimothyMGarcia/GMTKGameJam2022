@@ -6,8 +6,6 @@ public class SpawnerWalker : MonoBehaviour
 {
     private Transform player;
     [SerializeField] private float spawnDistance = 15f;
-    [SerializeField] private int spawnMax = 10;
-    private int spawns = 0;
 
     //[SerializeField] private GameObject spawnedPrefab;
     [SerializeField] public GameObject enemyPrefab;
@@ -32,10 +30,9 @@ public class SpawnerWalker : MonoBehaviour
             initialWait = false;
             GameObject newEnemy = Instantiate(enemy, transform.position + new Vector3(Random.Range(-spawnWidth, spawnWidth), 0f, 0), Quaternion.identity);
             //newEnemy.type = enemy;
-            spawns++;
             yield return new WaitForSeconds(interval);
         }
         else yield return new WaitForSeconds(1f);
-        if (spawns < spawnMax) StartCoroutine(spawnEnemyFloor(interval, enemy));
+        StartCoroutine(spawnEnemyFloor(interval, enemy));
     }
 }

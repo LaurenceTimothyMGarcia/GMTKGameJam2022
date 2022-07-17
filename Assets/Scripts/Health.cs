@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     public int health;
     public int MAX_HEALTH = 100;
     public Animator animator;
+
     //invincibility
     public Healthbar healthBar;
     public bool invincibility = false;
@@ -25,7 +26,7 @@ public class Health : MonoBehaviour
     {
         // if (Input.GetMouseButton(1))
         // {
-        //     damage(1);
+        //     heal(1);
         // }
     }
     public void damage(int amount){
@@ -35,6 +36,7 @@ public class Health : MonoBehaviour
         
         if(invincibility == false){
             //Debug.Log("took damage!");
+            FindObjectOfType<AudioManager>().Play("PlayerHit");
             Debug.Log(health);
             this.health -= amount;
             StartCoroutine(TookDamage());
@@ -63,6 +65,7 @@ public class Health : MonoBehaviour
         }else{
             health += amount;
         }
+        healthBar.setHealth(health);
 
     }
     private IEnumerator TookDamage(){
