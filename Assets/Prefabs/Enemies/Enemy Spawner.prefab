@@ -47,5 +47,5 @@ MonoBehaviour:
   spawnedPrefab: {fileID: 0}
   walkerPrefab: {fileID: 7143151337603684985, guid: ba7e50b39fc38e0428043f57236e7306, type: 3}
   flyerPrefab: {fileID: 6899377898761361493, guid: 4c4b05e9d0fc84a438fa07a89312d8c5, type: 3}
-  walkerInterval: 3.5
-  flyerInterval: 5
+  walkerInterval: 1
+  flyerInterval: 1
