@@ -13,7 +13,6 @@ public class WeaponActive : MonoBehaviour
     void Start()
     {
         //Sets everything to false
-        Debug.Log("Inital Startup");
         //WeaponSetActive(0);
         weaponArray[0].SetActive(true);
         // weaponArray[6].SetActive(false);

@@ -84,10 +84,6 @@ public class DiceCheck : MonoBehaviour
         //Default option is default gun
         int option = 0;
 
-        Debug.Log("Dice 1 is: " + rollResultList[0]);
-        Debug.Log("Dice 2 is: " + rollResultList[1]);
-        Debug.Log("Dice 3 is: " + rollResultList[2]);
-
         life.invincibility = false;
 
         //Rolls 111 shittiest roll, gives just melee
