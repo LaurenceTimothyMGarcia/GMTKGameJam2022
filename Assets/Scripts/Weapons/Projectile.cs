@@ -8,17 +8,29 @@ public class Projectile : MonoBehaviour {
     public float lifeTime;
     public float distance;
     public int damage;
-    public bool isGrenade;
     public bool pierce;
     public bool canStun;
     public LayerMask whatIsSolid;
     public GameObject projectile;
 
+    AudioManager bulletSound;
+    GameObject bSound;
+
+    public bool isPistol;
+    public bool isMachine;
+    public bool isSnipe;
+    public bool isWhip;
+    public bool isForce;
+    public bool isLaser;
     public bool isPie;
+    public bool isGrenade;
 
     public GameObject destroyEffect;
 
     private void Start() {
+        bulletSound = GetComponent<AudioManager>();
+        PlaySound();
+
         Invoke("DestroyProjectile", lifeTime);
     }
 
@@ -37,7 +49,7 @@ public class Projectile : MonoBehaviour {
 
             if (isPie)
             {
-                FindObjectOfType<AudioManager>().Play("PieInFace");
+                bulletSound.Play("PieInFace");
             }
 
             if (!pierce || hitInfo.collider.CompareTag("Ground"))
@@ -58,5 +70,43 @@ public class Projectile : MonoBehaviour {
         }
 
         Destroy(gameObject);
+    }
+
+    void PlaySound()
+    {
+        if (isPistol)
+        {
+            bulletSound.Play("Pistol");
+        }
+
+        if (isMachine)
+        {
+            bulletSound.Play("MachineGun");
+        }
+
+        if (isSnipe)
+        {
+            bulletSound.Play("Sniper");
+        }
+
+        if (isWhip)
+        {
+            bulletSound.Play("Whip");
+        }
+
+        if (isGrenade)
+        {
+            bulletSound.Play("Grenade");
+        }
+
+        if (isForce)
+        {
+            bulletSound.Play("ForcePush");
+        }
+
+        if (isLaser)
+        {
+            bulletSound.Play("LaserGun");
+        }
     }
 }

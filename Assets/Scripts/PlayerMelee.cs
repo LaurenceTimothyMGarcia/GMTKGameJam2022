@@ -12,8 +12,14 @@ public class PlayerMelee : MonoBehaviour
     public float offset;
     private float timeBtwAttacks;
     public float startTimeBtwAttacks;
+
+    AudioManager bulletSound;
+    GameObject bSound;
+
     void Start()
     {
+        bulletSound = GetComponent<AudioManager>();
+
         attackArea = transform.GetChild(1).gameObject;
         attackArea.SetActive(false);
         renderer = gameObject.GetComponent<SpriteRenderer>();
@@ -70,6 +76,7 @@ public class PlayerMelee : MonoBehaviour
    }
 
     private void Attack(){
+        bulletSound.Play("Whip");
         attacking = true;
         attackArea.SetActive(attacking);  
    }
