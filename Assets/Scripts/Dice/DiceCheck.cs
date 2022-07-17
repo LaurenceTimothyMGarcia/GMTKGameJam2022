@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DiceCheck : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class DiceCheck : MonoBehaviour
     [HideInInspector] public DiceRoll dRoll3;
     [SerializeField] GameObject dice3;
     [SerializeField] int rotateDie3;
+
+    public Text diceRollTitle;
 
     private int[] rollResultList = new int[3];
     public static int weaponRoll;
@@ -92,6 +95,7 @@ public class DiceCheck : MonoBehaviour
         //Rolls 111 shittiest roll, gives just melee
         if (rollResultList[0] == 1 && rollResultList[1] == 1 && rollResultList[2] == 1)
         {
+            diceRollTitle.text = "Horrific Luck";
             option = 1;
             return option;
         }
@@ -99,6 +103,7 @@ public class DiceCheck : MonoBehaviour
         //Rolls 314 - Turn into pie
         if (rollResultList[0] == 3 && rollResultList[1] == 1 && rollResultList[2] == 4)
         {
+            diceRollTitle.text = "Pi Day";
             option = 2;
             return option;
         }
@@ -106,6 +111,7 @@ public class DiceCheck : MonoBehaviour
         //Rolls 420 - Something about weed
         if (rollResultList[0] == 4 && rollResultList[1] == 2 && rollResultList[2] == 1)
         {
+            diceRollTitle.text = "Just a Leaf";
             option = 3;
             return option;
         }
@@ -113,6 +119,7 @@ public class DiceCheck : MonoBehaviour
         //Rolls 666 - Enemies just dead, reroll
         if (rollResultList[0] == 6 && rollResultList[1] == 6 && rollResultList[2] == 6)
         {
+            diceRollTitle.text = "Everyone Gone";
             option = 4;
             return option;
         }
@@ -120,6 +127,7 @@ public class DiceCheck : MonoBehaviour
         //Rolls 555 - Mario star invincible
         if (rollResultList[0] == 5 && rollResultList[1] == 5 && rollResultList[2] == 5)
         {
+            diceRollTitle.text = "Invincible";
             option = 5;
             return option;
         }
@@ -127,6 +135,7 @@ public class DiceCheck : MonoBehaviour
         //Rolls all same number - Machine Gun
         if (rollResultList[0] == rollResultList[1] && rollResultList[1] == rollResultList[2])
         {
+            diceRollTitle.text = "Mow 'em down";
             option = 6;
             return option;
         }
@@ -134,6 +143,7 @@ public class DiceCheck : MonoBehaviour
         //Rolls first and third die the same - Sniper
         if (rollResultList[0] == rollResultList[2])
         {
+            diceRollTitle.text = "From a distance";
             option = 7;
             return option;
         }
@@ -141,6 +151,7 @@ public class DiceCheck : MonoBehaviour
         //Rolls first and second are same - Whip
         if (rollResultList[0] == rollResultList[1])
         {
+            diceRollTitle.text = "Lash Out";
             option = 8;
             return option;
         }
@@ -148,6 +159,7 @@ public class DiceCheck : MonoBehaviour
         //Rolls second and third die the same - Bomb thrower?
         if (rollResultList[1] == rollResultList[2])
         {
+            diceRollTitle.text = "Down comes the grenades";
             option = 9;
             return option;
         }
@@ -155,6 +167,7 @@ public class DiceCheck : MonoBehaviour
         //Rolls consectutively increasing numbers - Force Push
         if ((rollResultList[0] + 2) == (rollResultList[1] + 1) && (rollResultList[1] + 1) == rollResultList[2])
         {
+            diceRollTitle.text = "Push Back";
             option = 10;
             return option;
         }
@@ -162,9 +175,12 @@ public class DiceCheck : MonoBehaviour
         //Rolls consectutively decreasing numbers - Laser gun/eyes?
         if ((rollResultList[2] + 2) == (rollResultList[1] + 1) && (rollResultList[1] + 1) == rollResultList[0])
         {
+            diceRollTitle.text = "Fry them up";
             option = 11;
             return option;
         }
+
+        diceRollTitle.text = "Pistol";
 
         //Other options if possible//
         /*

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DiceRoll : MonoBehaviour
 {
@@ -48,6 +49,7 @@ public class DiceRoll : MonoBehaviour
     private void StartRoll()
     {
         DiceCheck dSound = dice.GetComponent<DiceCheck>();
+        dSound.diceRollTitle.text = "Rolling...";
         dSound.diceSound.Play("DiceRolling");
         dSound.diceSound.Play("DiceRolling2");
         dSound.diceSound.Play("DiceRolling3");
