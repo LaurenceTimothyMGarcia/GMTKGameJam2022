@@ -14,6 +14,7 @@ public class EnemyBehavior : EnemyBaseState
     public float maxWanderDist;
     public float idleTime;
     public bool idleReady = true;
+    public int enemyDamage = 5;
 
     private Transform target; // player
     private Vector2 adjustedTarget;
@@ -118,6 +119,16 @@ public class EnemyBehavior : EnemyBaseState
         waypoint = new Vector3(Random.Range(transform.position.x - maxWanderDist, transform.position.x + maxWanderDist),
                                Random.Range(transform.position.y - maxWanderDist, transform.position.y + maxWanderDist), transform.position.z);
 
+    }
+
+    private void OnCollisionEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Debug.Log("Enemey hit palyer");
+            Health play = collision.GetComponent<Health>();
+            play.damage(enemyDamage);
+        }
     }
 
     // change direction when hitting a wall

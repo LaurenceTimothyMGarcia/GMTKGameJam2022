@@ -51177,10 +51177,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 1.4
       objectReference: {fileID: 0}
-    - target: {fileID: 2681970843055782077, guid: 03e65889f016fb643a7a65e65c7f106a, type: 3}
-      propertyPath: m_MaxValue
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 4642143364189010237, guid: 03e65889f016fb643a7a65e65c7f106a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -51246,10 +51242,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 601518699533665120, guid: 062f3d6612a6e8c4d97eb883a79ce197, type: 3}
+      propertyPath: _maxAcceleration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5011152913397924829, guid: 062f3d6612a6e8c4d97eb883a79ce197, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1203153402}
+    - target: {fileID: 7235955450063026014, guid: 062f3d6612a6e8c4d97eb883a79ce197, type: 3}
+      propertyPath: _jumpHeight
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7256744434960219818, guid: 062f3d6612a6e8c4d97eb883a79ce197, type: 3}
       propertyPath: m_Name
       value: Player
