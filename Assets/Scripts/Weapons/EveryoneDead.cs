@@ -5,17 +5,20 @@ using UnityEngine;
 public class EveryoneDead : MonoBehaviour
 {
     GameObject[] findEnemies;
-
+    public  SpriteRenderer renderer;
     // Start is called before the first frame update
     void Start()
     {
         findEnemies = GameObject.FindGameObjectsWithTag("Enemy");
-
+        renderer = gameObject.GetComponent<SpriteRenderer>();
+        
         //For loop to destroy enemy
         for (int i = 0; i < findEnemies.Length; i++)
         {
             KillEnemy(findEnemies[i]);
         }
+        StartCoroutine(PurgeAll());
+        
     }
 
     // Update is called once per frame
@@ -29,6 +32,11 @@ public class EveryoneDead : MonoBehaviour
         Destroy(enemy);
     }
 
+    private IEnumerator PurgeAll(){
+        renderer.enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        renderer.enabled = false;
+    }
     /*    Version if we want on command
     void Update()
     {
