@@ -38,7 +38,7 @@ public class Move : MonoBehaviour
         //  if(_desiredVelocity.x < 0)
         
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-
+        
         if(_desiredVelocity.x != 0){
             if(difference.x < 0)
             {
