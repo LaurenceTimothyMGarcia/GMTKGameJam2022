@@ -9,10 +9,10 @@ public class Stopwatch : MonoBehaviour
 {
     bool stopwatchActive = false;
     public float currentTime;
-    public TMP_Text currentTimeText;
+    public Text currentTimeText;
 
     int score;
-    public TMP_Text scoreText;
+    public Text scoreText;
     public float multiplier = 5;
 
     // Start is called before the first frame update
