@@ -50,7 +50,6 @@ public class PlayerMelee : MonoBehaviour
 
         //reset attack
         if(attacking){
-            Debug.Log("ATTACK");
             //counts
             timer += Time.deltaTime;
             if(timer >= timeToAttack){
@@ -66,7 +65,6 @@ public class PlayerMelee : MonoBehaviour
 
     private void Attack(){
         attacking = true;
-        Debug.Log("Hitting");
         attackArea.SetActive(attacking);  
    }
 }
