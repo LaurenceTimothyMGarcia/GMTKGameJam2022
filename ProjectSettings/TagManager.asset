@@ -51,3 +51,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Dice
+    uniqueID: 2506153815
+    locked: 0
