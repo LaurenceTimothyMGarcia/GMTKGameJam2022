@@ -6,7 +6,7 @@ public class Invincible : MonoBehaviour
 {
     Health life;
     [SerializeField] GameObject player;
-
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
