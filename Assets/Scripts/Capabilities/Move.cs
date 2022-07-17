@@ -36,6 +36,12 @@ public class Move : MonoBehaviour
         _desiredVelocity = new Vector2(_direction.x,0f) * Mathf.Max(_maxSpeed - _ground.Friction, 0f);
         
         if(_desiredVelocity.x != 0){
+            if(_desiredVelocity.x < 0){
+                //flipping character
+                gameObject.transform.localScale = new Vector3(-1,1,1);
+            }else if(_desiredVelocity.x > 0 ){
+                gameObject.transform.localScale = new Vector3(1,1,1);
+            }
             animator.SetTrigger("IsMoving");
         }else{
             animator.SetTrigger("Still");
