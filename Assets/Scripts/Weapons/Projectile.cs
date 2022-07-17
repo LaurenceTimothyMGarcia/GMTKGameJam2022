@@ -13,6 +13,8 @@ public class Projectile : MonoBehaviour {
     public LayerMask whatIsSolid;
     public GameObject projectile;
 
+    private AudioManager[] bulletSound;
+
     //AudioManager bulletSound;
     //public GameObject bSound;
 
@@ -27,6 +29,11 @@ public class Projectile : MonoBehaviour {
     public bool isExplode;
 
     public GameObject destroyEffect;
+
+    private void Awake()
+    {
+        bulletSound = FindObjectsOfType<AudioManager>();
+    }
 
     private void Start() {
         //bulletSound = GetComponent<AudioManager>();
@@ -77,42 +84,99 @@ public class Projectile : MonoBehaviour {
     {
         if (isPistol)
         {
-            FindObjectOfType<AudioManager>().Play("Pistol");
+            //FindObjectOfType<AudioManager>().Play("Pistol");
+            for (int i = 0; i < bulletSound.Length; i++)
+            {
+                if (bulletSound[i].Play("Pistol"))
+                {
+                    bulletSound[i].Play("Pistol");
+                }
+            }
+            
         }
 
         if (isMachine)
         {
-            FindObjectOfType<AudioManager>().Play("MachineGun");
+            //FindObjectOfType<AudioManager>().Play("MachineGun");
+            for (int i = 0; i < bulletSound.Length; i++)
+            {
+                if (bulletSound[i].Play("MachineGun"))
+                {
+                    bulletSound[i].Play("MachineGun");
+                }
+            }
         }
 
         if (isSnipe)
         {
-            FindObjectOfType<AudioManager>().Play("Sniper");
+            //FindObjectOfType<AudioManager>().Play("Sniper");
+            for (int i = 0; i < bulletSound.Length; i++)
+            {
+                if (bulletSound[i].Play("Sniper"))
+                {
+                    bulletSound[i].Play("Sniper");
+                }
+            }
         }
 
         if (isWhip)
         {
-            FindObjectOfType<AudioManager>().Play("Whip");
+            //FindObjectOfType<AudioManager>().Play("Whip");
+            for (int i = 0; i < bulletSound.Length; i++)
+            {
+                if (bulletSound[i].Play("Whip"))
+                {
+                    bulletSound[i].Play("Whip");
+                }
+            }
         }
 
         if (isGrenade)
         {
-            FindObjectOfType<AudioManager>().Play("Grenade");
+            //FindObjectOfType<AudioManager>().Play("Grenade");
+            for (int i = 0; i < bulletSound.Length; i++)
+            {
+                if (bulletSound[i].Play("Grenade"))
+                {
+                    bulletSound[i].Play("Grenade");
+                }
+            }
         }
 
         if (isForce)
         {
-            FindObjectOfType<AudioManager>().Play("ForcePush");
+            //FindObjectOfType<AudioManager>().Play("ForcePush");
+            for (int i = 0; i < bulletSound.Length; i++)
+            {
+                if (bulletSound[i].Play("ForcePush"))
+                {
+                    bulletSound[i].Play("ForcePush");
+                }
+            }
         }
 
         if (isLaser)
         {
-            FindObjectOfType<AudioManager>().Play("LaserGun");
+            //FindObjectOfType<AudioManager>().Play("LaserGun");
+            for (int i = 0; i < bulletSound.Length; i++)
+            {
+                if (bulletSound[i].Play("LaserGun"))
+                {
+                    bulletSound[i].Play("LaserGun");
+                }
+            }
         }
 
         if (isExplode)
         {
-            FindObjectOfType<AudioManager>().Play("Explode");
+            //FindObjectOfType<AudioManager>().Play("Explode");
+            for (int i = 0; i < bulletSound.Length; i++)
+            {
+                if (bulletSound[i].Play("Explode"))
+                {
+                    bulletSound[i].Play("Explode");
+                }
+            }
         }
     }
 }

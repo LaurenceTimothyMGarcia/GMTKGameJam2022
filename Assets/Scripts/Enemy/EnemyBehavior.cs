@@ -4,6 +4,8 @@ using UnityEngine;
 public class EnemyBehavior : EnemyBaseState
 {
     public Animator animator;
+    public AudioManager enemySound;
+    public GameObject eSound;
     public bool isStunned;
     public float stunTime;
     private float currentStunTime;
@@ -27,6 +29,7 @@ public class EnemyBehavior : EnemyBaseState
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        enemySound = eSound.GetComponent<AudioManager>();
     }
 
     private void Start()
@@ -62,7 +65,7 @@ public class EnemyBehavior : EnemyBaseState
                 hunting = true;
                 if (idleReady)
                 {
-                    FindObjectOfType<AudioManager>().Play("AlienApproach");
+                    enemySound.Play("AlienApproach");
                     idleReady = false;
                 }
                 
@@ -72,7 +75,7 @@ public class EnemyBehavior : EnemyBaseState
             {
                 if (hunting)
                 {
-                    FindObjectOfType<AudioManager>().Play("AlienIdle");
+                    enemySound.Play("AlienIdle");
                     hunting = false;
                     lostTarget = true;
                     idleReady = true;

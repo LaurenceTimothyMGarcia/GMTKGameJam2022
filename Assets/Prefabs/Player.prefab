@@ -1604,7 +1604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxSpeed: 20
-  _maxAcceleration: 35
+  _maxAcceleration: 10
   _maxAirAcceleration: 50
   animator: {fileID: 1897491635940101645}
   renderer: {fileID: 7304401328836762859}

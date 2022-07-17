@@ -11,7 +11,7 @@ public class Move : MonoBehaviour
 
     private Controller _controller;
     private Vector2 _direction;
-    private Vector2 _desiredVelocity;
+    [HideInInspector] public Vector2 _desiredVelocity;
     private Vector2 _velocity;
     private Rigidbody2D _body;
     private Ground _ground;

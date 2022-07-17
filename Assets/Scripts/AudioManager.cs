@@ -26,16 +26,17 @@ public class AudioManager : MonoBehaviour
     }
 
     //Play sound by typing FindObjectOfType<AudioManager>().Play("nameOfSound");
-    public void Play(string name)
+    public bool Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
             Debug.Log("Sound: " + name + "not found.");
-            return;
+            return false;
         }
 
         s.source.Play();
+        return true;
     }
 
     //Stop sound (AudioManagerReferenceGoeshere).StopPlaying("sound string name");

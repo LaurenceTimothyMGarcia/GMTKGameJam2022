@@ -36,7 +36,8 @@ Transform:
   m_LocalPosition: {x: 7, y: 2.06, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6720357406543582078}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -176,6 +177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 9087704316331654161}
+  enemySound: {fileID: 6720357406543582073}
+  eSound: {fileID: 6720357406543582079}
   isStunned: 0
   stunTime: 10
   flying: 1
@@ -248,3 +251,81 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.62, y: 0.76}
   m_EdgeRadius: 0
+--- !u!1001 &3897216477966972035
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1567407831311948290}
+    m_Modifications:
+    - target: {fileID: 7734423052229224444, guid: a650a052f09af184db2c17ec8ed58b7a, type: 3}
+      propertyPath: m_Name
+      value: AudioManager(Enemy)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734423052229224445, guid: a650a052f09af184db2c17ec8ed58b7a, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734423052229224445, guid: a650a052f09af184db2c17ec8ed58b7a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734423052229224445, guid: a650a052f09af184db2c17ec8ed58b7a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734423052229224445, guid: a650a052f09af184db2c17ec8ed58b7a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734423052229224445, guid: a650a052f09af184db2c17ec8ed58b7a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734423052229224445, guid: a650a052f09af184db2c17ec8ed58b7a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734423052229224445, guid: a650a052f09af184db2c17ec8ed58b7a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734423052229224445, guid: a650a052f09af184db2c17ec8ed58b7a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734423052229224445, guid: a650a052f09af184db2c17ec8ed58b7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734423052229224445, guid: a650a052f09af184db2c17ec8ed58b7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7734423052229224445, guid: a650a052f09af184db2c17ec8ed58b7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a650a052f09af184db2c17ec8ed58b7a, type: 3}
+--- !u!114 &6720357406543582073 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7734423052229224442, guid: a650a052f09af184db2c17ec8ed58b7a, type: 3}
+  m_PrefabInstance: {fileID: 3897216477966972035}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6720357406543582079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82b54a60717f114eb36a43cbff48d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &6720357406543582078 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7734423052229224445, guid: a650a052f09af184db2c17ec8ed58b7a, type: 3}
+  m_PrefabInstance: {fileID: 3897216477966972035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6720357406543582079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7734423052229224444, guid: a650a052f09af184db2c17ec8ed58b7a, type: 3}
+  m_PrefabInstance: {fileID: 3897216477966972035}
+  m_PrefabAsset: {fileID: 0}
