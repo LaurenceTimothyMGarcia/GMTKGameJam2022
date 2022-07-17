@@ -52,15 +52,27 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: DiceRolling
-    clip: {fileID: 8300000, guid: 531bbffa983dcda45b4cbd673fd4f4be, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: f285ba979b7b177469538936d21a9dc9, type: 3}
+    volume: 0.75
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: DiceResult
-    clip: {fileID: 8300000, guid: 42dec2f1a306b05419260cebe10294cb, type: 3}
+  - name: DiceRolling2
+    clip: {fileID: 8300000, guid: a913d1edd262d7f44af32edc575c61e9, type: 3}
     volume: 0.75
-    pitch: 0.75
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DiceRolling3
+    clip: {fileID: 8300000, guid: f7f8991c08390d744a8538aa10f173da, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DiceResult
+    clip: {fileID: 8300000, guid: 8520c2a6aaf29c547824a13df7088b49, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: PieInFace

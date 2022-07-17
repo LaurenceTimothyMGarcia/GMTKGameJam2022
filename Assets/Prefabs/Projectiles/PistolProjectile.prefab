@@ -101,7 +101,7 @@ MonoBehaviour:
   speed: 15
   lifeTime: 2
   distance: 0.25
-  damage: 25
+  damage: 50
   pierce: 0
   canStun: 0
   whatIsSolid:

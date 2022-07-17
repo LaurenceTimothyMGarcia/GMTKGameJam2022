@@ -1606,6 +1606,7 @@ MonoBehaviour:
   _maxSpeed: 20
   _maxAcceleration: 10
   _maxAirAcceleration: 50
+  _desiredVelocity: {x: 0, y: 0}
   animator: {fileID: 1897491635940101645}
   renderer: {fileID: 7304401328836762859}
 --- !u!114 &7235955450063026014
@@ -2105,10 +2106,6 @@ PrefabInstance:
     - target: {fileID: 3166371916122805122, guid: 3633ebcf78befcd49a1db09957abc7ac, type: 3}
       propertyPath: m_Name
       value: AudioManager(Bullet)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6681105561324376398, guid: 3633ebcf78befcd49a1db09957abc7ac, type: 3}
-      propertyPath: sounds.Array.data[3].volume
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7488279754333288289, guid: 3633ebcf78befcd49a1db09957abc7ac, type: 3}
       propertyPath: m_RootOrder

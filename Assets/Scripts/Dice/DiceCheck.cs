@@ -65,6 +65,9 @@ public class DiceCheck : MonoBehaviour
         if (dRoll3.hasRolled)
         {
             rollResultList[2] = dRoll3.GetDiceResult();
+            diceSound.StopPlaying("DiceRolling");
+            diceSound.StopPlaying("DiceRolling2");
+            diceSound.StopPlaying("DiceRolling3");
             diceSound.Play("DiceResult");
             dRoll1.hasRolled = false;
             dRoll2.hasRolled = false;

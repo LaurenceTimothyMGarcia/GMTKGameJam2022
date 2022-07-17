@@ -13,6 +13,8 @@ public class ForcePush : MonoBehaviour
     public LayerMask whatIsSolid;
     public GameObject projectile;
 
+    AudioManager[] forceSound;
+
     public GameObject destroyEffect;
 
     //AudioManager bulletSound;
@@ -20,7 +22,15 @@ public class ForcePush : MonoBehaviour
 
     private void Start() {
         //bulletSound = GetComponent<AudioManager>();
-        FindObjectOfType<AudioManager>().Play("ForcePush");
+        forceSound = FindObjectsOfType<AudioManager>();
+        for (int i = 0; i < forceSound.Length; i++)
+        {
+            if (forceSound[i].Play("ForcePush"))
+            {
+                forceSound[i].Play("ForcePush");
+            }
+        }
+
         Invoke("DestroyProjectile", lifeTime);
     }
 

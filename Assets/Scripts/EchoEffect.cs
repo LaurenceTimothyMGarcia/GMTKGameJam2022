@@ -22,7 +22,7 @@ public class EchoEffect : MonoBehaviour
             if (timeBtwSpawns <= 0)
             {
                 GameObject instanceEcho = Instantiate(echo, transform.position, Quaternion.identity);
-                Destroy(instanceEcho, 8f);
+                Destroy(instanceEcho, 2f);
                 timeBtwSpawns = startTimeBtwSpawns;
             }
             else

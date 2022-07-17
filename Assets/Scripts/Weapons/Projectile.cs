@@ -57,7 +57,13 @@ public class Projectile : MonoBehaviour {
 
             if (isPie)
             {
-                FindObjectOfType<AudioManager>().Play("PieInFace");
+                for (int i = 0; i < bulletSound.Length; i++)
+                {
+                    if (bulletSound[i].Play("PieInFace"))
+                    {
+                        bulletSound[i].Play("PieInFace");
+                    }
+                }
             }
 
             if (!pierce || hitInfo.collider.CompareTag("Ground"))

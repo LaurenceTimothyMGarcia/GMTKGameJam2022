@@ -49,8 +49,9 @@ public class DiceRoll : MonoBehaviour
     {
         DiceCheck dSound = dice.GetComponent<DiceCheck>();
         dSound.diceSound.Play("DiceRolling");
+        dSound.diceSound.Play("DiceRolling2");
+        dSound.diceSound.Play("DiceRolling3");
         StartCoroutine(RollDie());
-        dSound.diceSound.StopPlaying("DiceRolling");
     }
 
     private IEnumerator RollDie()

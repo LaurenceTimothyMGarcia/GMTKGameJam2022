@@ -65,7 +65,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Whip
     clip: {fileID: 8300000, guid: 9c6ec0a4fd3bb4c4ba6a21ef49b8a680, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -83,7 +83,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: LaserGun
     clip: {fileID: 8300000, guid: b9e5336761995424190449514990d2a8, type: 3}
-    volume: 0.1
+    volume: 0.5
     pitch: 3
     loop: 0
     source: {fileID: 0}
