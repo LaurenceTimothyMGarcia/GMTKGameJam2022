@@ -52150,7 +52150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3525713911839500109, guid: 03e65889f016fb643a7a65e65c7f106a, type: 3}
       propertyPath: multiplier
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4642143364189010237, guid: 03e65889f016fb643a7a65e65c7f106a, type: 3}
       propertyPath: m_AnchorMax.y

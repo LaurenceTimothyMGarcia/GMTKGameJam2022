@@ -26,7 +26,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            enemyScore += 1000;
+            enemyScore += 100;
 
             DestroyEnemy();
         }
